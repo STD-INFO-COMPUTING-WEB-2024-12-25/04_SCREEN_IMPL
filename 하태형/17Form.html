@@ -25,22 +25,21 @@
 
         form {
             width: 100%;
-            max-width: 500px;
-            padding: 20px;
+            max-width: 380px;
+            padding: 0px;
             background-color: white;
-            margin-left: auto;
-            margin-right: auto;
+            margin: auto;
         }
 
         a {
             color: #29c3ff;
-            font-size: 0.8rem;
+            font-size: 0.74rem;
         }
 
         .logo {
             width: 120px;
-            margin-bottom: 20px;
-            margin: 60px;
+            margin-bottom: 10px;
+            margin: 30px;
         }
 
         .btn-custom {
@@ -54,14 +53,21 @@
 
         .custom-input {
             width: 250px;
-            height: 40px;
+            height: 50px;
             border: none;
             border-radius: 0;
-            border-bottom: 2px solid black;
+            border-bottom: 3px solid gainsboro;
             padding: 10px;
-            font-size: large;
+            font-size: 120%;
             font-weight: bold;
             color: black;
+        }
+
+        .checkbox {
+            border: 2px solid black;
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
         }
     </style>
 
@@ -70,33 +76,48 @@
 <body>
 
 
-    <form action="/test.jsp" method="get" class="mt-5">
-        <div>
-            <img class="logo" src="./images/artshub logo2.png" alt="이미지로고">
-        </div>
-        <div class="mb-3">
-            <label for=""></label>
-            <input type="text" name="userid" class="form-control custom-input" placeholder="아이디" id="userid">
-        </div>
-        <div class="mb-1">
-            <label for=""></label>
-            <input type="text" name="userpw" class="form-control custom-input" placeholder="패스워드" id="userpw">
-        </div>
-        <div style="display: flex;" class="mb-3">
-            <a href="">아이디/비밀번호 찾기</a>
-            <a href="" style="margin-left: 16%;">회원가입</a>
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="" style="vertical-align: middle;">
-            <label class="form-check-label" for="" style="font-size: 0.8rem; font-weight:bold;">아이디 기억하기</label>
-        </div>
-        <div class="mt-3">
-            <label for=""></label>
-            <button class="btn btn-custom btn-lg" type="submit">로그인</button>
+    <form action="/test.jsp" method="get" class="mt-1 m-0 p-0">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <img class="logo" src="./images/artshub logo2.png" alt="이미지로고">
+            </div>
         </div>
 
+        <div class="row mb-3 justify-content-center">
+            <div class="col-12 col-md-8">
+                <input type="text" name="userid" class="form-control custom-input" placeholder="아이디" id="userid">
+            </div>
+        </div>
+
+        <div class="row mb-4 justify-content-center">
+            <div class="col-12 col-md-8">
+                <input type="text" name="userpw" class="form-control custom-input" placeholder="비밀번호" id="userpw">
+            </div>
+        </div>
+        
+        <div class="row mb-3 justify-content-center">
+            <div class="col-12 col-md-8 text-left">
+                <a href="">아이디/비밀번호 찾기</a>
+                <label for=""style="width: 70px;"></label>
+                <a href="" style="margin-left: auto;">회원가입</a>
+            </div> 
+        </div>
+        
+        <div class="row mb-3 justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="idremember">
+                    <label class="form-check-label" for="rememberMe" style="font-size: 0.8rem; font-weight: bold; text-align: center;">아이디 기억하기</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-1 justify-content-center">
+            <div class="col-12 col-md-8 text-center">
+                <button class="btn btn-custom btn-lg" type="submit">로그인</button>
+            </div>
+        </div>
     </form>
-
 </body>
 
 </html>
