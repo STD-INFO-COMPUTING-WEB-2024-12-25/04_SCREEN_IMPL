@@ -17,19 +17,57 @@
     <style>
         * {
             box-sizing: border-box;
-            font-size : .9rem;
-        }
-        body{
-            padding : 0;
-            margin : 0;
-        }
-        a{
-            text-decoration: none;
-            color : black;
+            font-size: .8rem;
         }
 
-        form{
-            
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 폼속성 */
+        form {
+            width: 380px !important;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        /* 위치조정 아래 4개*/
+        form>.right-position {
+            float: right;
+        }
+
+        form>.left-position {
+            float: left;
+        }
+
+        .button-container {
+            float: inline-end;
+            display: flex;
+            align-items: center;
+        }
+
+        form>.container {
+            float: block;
+        }
+
+        /* 버튼 투명색 */
+        .transparent-button {
+            background-color: transparent;
+            border: 0px;
+            color: #000;
+            padding: 10px 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .button-center {
+            text-align: center;
         }
     </style>
 
@@ -40,31 +78,51 @@
 
     <form action="/test.jsp" method="get" class="mt-5">
         <div>
-            <img src="" alt="이미지로고">
+            <img width="100px" height="100px" src="./images/루피.png" alt="이미지로고">
         </div>
-        <div>
-            <h2>로그인</h2>
+        <!-- 제목 -->
+        <div class="row mb-5">
+            <h2 class="fw-bold">로그인</h2>
         </div>
-        <div>
-            <label for="">아이디 : </label>
-            <input type="text" name="username" />
-        </div>
-        <div>
-            <label for="">패스워드 : </label>
-            <input type="text" name="username" />
-        </div>
-        <div>
-            <input type="checkbox">
-            <label for="">로그인 상태를 유지</label>
-        </div>
-        <div>
+        <!-- 아이디 -->
+        <div class="row mb-2">
             <label for=""></label>
-            <button>로그인</button>
+            <input type="text" name="username" placeholder="아이디를 입력해주세요" class="col form-control" />
         </div>
-        <div>
+        <!-- 비번 -->
+        <div class="row mb-2">
             <label for=""></label>
-            <button>회원가입</button>
+            <input type="password" name="password" placeholder="비밀번호를 입력해주세요" class="col form-control" />
         </div>
+        <!--가로 컨텐츠-->
+        <div class="row form-check form-switch">
+            <input class="row form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="row form-check-label" for="flexSwitchCheckDefault">로그인 상태를 유지</label>
+        </div>
+        <div class="button-container">
+            <div class="row right-position ms-2">
+                <button class="transparent-button">비밀번호 찾기</button>
+            </div>
+            <span>|</span>
+            <div class="row right-position ms-2">
+                <button class="transparent-button">아이디 찾기</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!-- 로그인 -->
+        <div class="row button-center mb-2">
+            <label for=""></label>
+            <button class="btn btn-primary w-100">로그인</button>
+        </div>
+        <!-- 회원가입 -->
+        <div class="row button-center mb-2">
+            <label for=""></label>
+            <button class="btn btn-light w-100">회원가입</button>
+        </div>
+
+
     </form>
 
 </body>
