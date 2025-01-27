@@ -33,9 +33,16 @@
       }
       form {
         width: 400px !important;
-        margin: 50px auto;
-        border: 2px solid black;
-        padding: 20px !important;
+        border: 1px solid black;
+        /* 포지셔닝 */
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        max-height: 800px;
+        padding: 20px;
       }
       form > div {
         height: 50px;
@@ -45,7 +52,7 @@
   </head>
 
   <body>
-    <form action="/test.jsp" method="get" class="mt-5 container">
+    <form action="/test.jsp" method="get" class="mt-5">
       <div class="row mb-2 align-items-center">
         <img src="" alt="이미지로고" class="col text-center" />
       </div>
@@ -60,13 +67,13 @@
         <label for="" class="col-3">패스워드 : </label>
         <input type="text" name="username" class="col form-control" />
       </div>
-      <div class="row mb-2 pt-2 form-check">
+      <div class="row m-0 p-0 form-check">
         <input
           id="keep_login"
           type="checkbox"
-          class="col-1 p-0 mb-2 ms-2 form-check-input"
+          class="col-1 p-0 mb-2 ms-2 mt-2 form-check-input"
         />
-        <label for="keep_login" class="col-10 ms-2 form-check-label p-0"
+        <label for="keep_login" class="col-10 ms-2 mt-2 form-check-label p-0"
           >로그인 상태를 유지</label
         >
       </div>
