@@ -6,16 +6,32 @@
     <title>Document</title>
     <style>
         :root{
-
+            font-size:24px;
         }
         div{
             text-align:center;
             margin:20px;padding:20px;
             border:1px solid;
         }
-        .block1{}
-        .block2{}
-        .block3{}
+        .block1{
+            /* px */
+            width:250px;
+            height:250px;
+            font-size : 16px;
+        }
+        .block2{
+            /* rem */
+            width:15.625rem;
+            height:15.625rem;
+            font-size : 1rem;
+        }
+        .block3{
+            /* vw,vh */
+            width:clamp(15.625rem,50vw,50rem);
+            height:25vh;
+            min-height:3rem;
+            font-size : clamp(1.5rem,5vw,5rem);
+        }
     </style>
 </head>
 <body>
