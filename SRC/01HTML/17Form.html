@@ -16,58 +16,140 @@
 
     <style>
         body {
+            margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        form {
-            width: 100%;
-            max-width: 380px;
-            padding: 0px;
-            background-color: white;
-            margin: auto;
         }
 
         a {
-            color: #29c3ff;
-            font-size: 0.74rem;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.663);
+            font-size: 14px;
+            padding: 0 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
 
-        .logo {
-            width: 120px;
-            margin-bottom: 10px;
-            margin: 30px;
-        }
-
-        .btn-custom {
-            border: 3px solid black;
-            background-color: #29c3ff;
-            color: white;
-            font-size: 1.4rem;
-            width: 250px;
-            border-radius: 10px;
+        .mainlogo {
+            display: flex;
+            margin: 40px auto;
+            width: 150px;
+            height: 180px;
         }
 
         .custom-input {
-            width: 250px;
-            height: 50px;
-            border: none;
-            border-radius: 0;
-            border-bottom: 3px solid gainsboro;
-            padding: 10px;
-            font-size: 120%;
-            font-weight: bold;
-            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            width: 462px;
+            margin-bottom: 14px;
+            border-color: rgb(238, 234, 234);
         }
 
-        .checkbox {
-            border: 2px solid black;
-            width: 20px;
-            height: 20px;
-            border-radius: 0;
+        .custom-input:hover {
+            border-color: gray;
+        }
+
+        .cb {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-custom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: none;
+            margin-top: 12px;
+            width: 462px;
+            height: 48px;
+            padding: 9px 23px;
+
+        }
+
+        .box1 {
+            border: 1px solid;
+            border-radius: 17px;
+            padding: 48px 36px;
+            border-color: rgb(238, 234, 234);
+        }
+
+        .btn1 {
+            background-color: #29c3ff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn1:hover {
+            background-color: #0c7dff;
+        }
+
+        .btn2 {
+            background-color: #fee500;
+            color: black;
+            border-radius: 5px;
+        }
+
+        .btn2:hover {
+            background-color: #d1bc03;
+        }
+
+        .btn3 {
+            background-color: #00d337;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn3:hover {
+            background-color: #01a12c;
+        }
+
+        .hypertext {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hypertext a:not(:last-child) {
+            border-right: 1px solid lightgray;
+            padding-right: 15px;
+        }
+
+        .naver {
+            filter: brightness(0) invert(1);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 15px;
+        }
+
+        .kakao {
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            left: 18px;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            margin-top: 55px;
+            border-radius: 50%;
+            gap: 10px;
+        }
+
+        .img-social {
+            width: 48px;
+            height: 48px;
+        }
+        .btn-social{
+            border: none;
+            background-color: white;
+            border-radius: 50%;
         }
     </style>
 
@@ -76,48 +158,77 @@
 <body>
 
 
-    <form action="/test.jsp" method="get" class="mt-1 m-0 p-0">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <img class="logo" src="./video/arts hub.png" alt="이미지로고">
+    <form action="/test.jsp" method="get" class="mt-5 p-0 m-0">
+        <!-- 메인 로고 -->
+        <div class="row">
+            <div class="col">
+                <img src="./logo/mainlogo.png" alt="이미지로고" class="mainlogo">
             </div>
         </div>
-
-        <div class="row mb-3 justify-content-center">
-            <div class="col-12 col-md-8">
-                <input type="text" name="userid" class="form-control custom-input" placeholder="아이디" id="userid">
+        <!-- 로그인유지 체크박스 -->
+        <div class="cb mb-3">
+            <div>
+                <input type="checkbox">
+                <label for="" style="font-size: 14px;">로그인 유지</label>
             </div>
         </div>
-
-        <div class="row mb-4 justify-content-center">
-            <div class="col-12 col-md-8">
-                <input type="text" name="userpw" class="form-control custom-input" placeholder="비밀번호" id="userpw">
+        <div class="box1">
+            <!-- 이메일 입력 -->
+            <div class="row custom-input">
+                <div class="col">
+                    <input type="text" name="userid" class="form-control custom-input" placeholder="이메일 입력" id="userid" required  oninvalid="this.setCustomValidity('이메일을 입력해주세요')">
+                </div>
             </div>
-        </div>
-        
-        <div class="row mb-3 justify-content-center">
-            <div class="col-12 col-md-8 text-left">
-                <a href="">아이디/비밀번호 찾기</a>
-                <label for=""style="width: 70px;"></label>
-                <a href="" style="margin-left: auto;">회원가입</a>
-            </div> 
-        </div>
-        
-        <div class="row mb-3 justify-content-center">
-            <div class="col-12 col-md-8">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="idremember">
-                    <label class="form-check-label" for="rememberMe" style="font-size: 0.8rem; font-weight: bold; text-align: center;">아이디 기억하기</label>
+            <!-- 비밀번호 입력 -->
+            <div class="row custom-input">
+                <div class="col">
+                    <input type="password" name="userpw" class="form-control custom-input" placeholder="비밀번호 입력" id="userpw" required oninvalid="this.setCustomValidity('비밀번호를 입력해주세요')">
+                </div>
+            </div>
+            <!-- 이메일로 로그인하기 버튼 -->
+            <div class="row mt-4">
+                <div class="col">
+                    <button class="btn1 btn-custom">이메일로 로그인하기</button>
+                </div>
+            </div>
+            <!-- 카카오로 시작하기 -->
+            <div class="row">
+                <div class="col">
+                    <button class="btn2 btn-custom">
+                        <img src="logo/kakao.png" alt="카카오" class="kakao"> 카카오로 시작하기</button>
+                </div>
+            </div>
+            <!-- 네이버로 시작하기 -->
+            <div class="row">
+                <div class="col">
+                    <button class="btn3 btn-custom">
+                        <img src="logo/naver.png" alt="네이버" class="naver">
+                        네이버로 시작하기
+                    </button>
+                    <!-- </div>
+            </div> -->
+                    <!-- 구글, 페북, 애플 이미지 -->
+                    <div class="logos">
+                        <!-- <div class="col"> -->
+                            <button type="button" class="btn-social" onclick="location.href='www.google.com'">
+                                <img src="./logo/google.png" alt="구글" class="img-social">
+                            </button>
+                            <button type="button" class="btn-social" onclick="location.href='www.facebook.com'">
+                                <img src="./logo/facebook.png" alt="페북" class="img-social">
+                            </button>
+                        <button type="button" class="btn-social" onclick="location.href='www.apple.com'">
+                            <img src="./logo/apple.png" alt="애플" class="img-social">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="row mt-1 justify-content-center">
-            <div class="col-12 col-md-8 text-center">
-                <button class="btn btn-custom btn-lg" type="submit">로그인</button>
-            </div>
+        <div class="hypertext">
+            <a href="">아이디/비밀번호 찾기</a>
+            <a href="">회원가입</a>
         </div>
     </form>
+
 </body>
 
 </html>
