@@ -15,21 +15,59 @@
 
 
     <style>
-        * {
-            box-sizing: border-box;
-            font-size : .9rem;
-        }
-        body{
-            padding : 0;
-            margin : 0;
-        }
-        a{
-            text-decoration: none;
-            color : black;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
         }
 
-        form{
-            
+        form {
+            width: 100%;
+            max-width: 380px;
+            padding: 0px;
+            background-color: white;
+            margin: auto;
+        }
+
+        a {
+            color: #29c3ff;
+            font-size: 0.74rem;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 10px;
+            margin: 30px;
+        }
+
+        .btn-custom {
+            border: 3px solid black;
+            background-color: #29c3ff;
+            color: white;
+            font-size: 1.4rem;
+            width: 250px;
+            border-radius: 10px;
+        }
+
+        .custom-input {
+            width: 250px;
+            height: 50px;
+            border: none;
+            border-radius: 0;
+            border-bottom: 3px solid gainsboro;
+            padding: 10px;
+            font-size: 120%;
+            font-weight: bold;
+            color: black;
+        }
+
+        .checkbox {
+            border: 2px solid black;
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
         }
     </style>
 
@@ -38,35 +76,48 @@
 <body>
 
 
-    <form action="/test.jsp" method="get" class="mt-5">
-        <div>
-            <img src="" alt="이미지로고">
+    <form action="/test.jsp" method="get" class="mt-1 m-0 p-0">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <img class="logo" src="./images/artshub logo2.png" alt="이미지로고">
+            </div>
         </div>
-        <div>
-            <h2>로그인</h2>
+
+        <div class="row mb-3 justify-content-center">
+            <div class="col-12 col-md-8">
+                <input type="text" name="userid" class="form-control custom-input" placeholder="아이디" id="userid">
+            </div>
         </div>
-        <div>
-            <label for="">아이디 : </label>
-            <input type="text" name="username" />
+
+        <div class="row mb-4 justify-content-center">
+            <div class="col-12 col-md-8">
+                <input type="text" name="userpw" class="form-control custom-input" placeholder="비밀번호" id="userpw">
+            </div>
         </div>
-        <div>
-            <label for="">패스워드 : </label>
-            <input type="text" name="username" />
+        
+        <div class="row mb-3 justify-content-center">
+            <div class="col-12 col-md-8 text-left">
+                <a href="">아이디/비밀번호 찾기</a>
+                <label for=""style="width: 70px;"></label>
+                <a href="" style="margin-left: auto;">회원가입</a>
+            </div> 
         </div>
-        <div>
-            <input type="checkbox">
-            <label for="">로그인 상태를 유지</label>
+        
+        <div class="row mb-3 justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="idremember">
+                    <label class="form-check-label" for="rememberMe" style="font-size: 0.8rem; font-weight: bold; text-align: center;">아이디 기억하기</label>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for=""></label>
-            <button>로그인</button>
-        </div>
-        <div>
-            <label for=""></label>
-            <button>회원가입</button>
+        
+        <div class="row mt-1 justify-content-center">
+            <div class="col-12 col-md-8 text-center">
+                <button class="btn btn-custom btn-lg" type="submit">로그인</button>
+            </div>
         </div>
     </form>
-
 </body>
 
 </html>
