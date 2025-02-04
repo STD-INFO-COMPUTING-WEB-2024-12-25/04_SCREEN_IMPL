@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        h1{
+            text-align: center;
+        }
         *{box-sizing: border-box;}
         /* common */
         a{ text-decoration: none;color:black;}
@@ -12,6 +15,10 @@
         body{margin :0;}
 
         /* layout */
+        .wrapper{
+            width: 1280px;
+            margin: auto;
+        }
         .wrapper{}
         /* header */
         .wrapper>header{}
@@ -28,40 +35,52 @@
             height:100%;
         }
         .wrapper>header>nav>ul.main-menu>li{
-            border : 1px solid green;
+            border : 1px solid yellowgreen;
             width:100%;
             height:100%;
             line-height:50px;
             text-align:center;
+            position: relative;
         }
         .wrapper>header>nav>ul.main-menu>li>a{
-            background-color: yellowgreen;
+            background-color: yellow;
             display:block;
         }
 
         /* sub-menu */
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
             background-color: aqua;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100%;
+
+            display: none;
+
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
             border : 1px solid rosybrown;
             
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a{
-            background-color: red;
+            background-color: royalblue;
             display: block;
           
         }
-
+        /* hover event */
+        .wrapper>header>nav>ul.main-menu>li:hover>ul.sub-menu{
+            display: block;
+        }
         /* main  */
         .wrapper>main{}
         .wrapper>main>section{}
         /* footer */
         .wrapper>footer{}
+
     </style>
 </head>
 <body>
-    <h1>-최서연-</h1>
+    <h1>MARKET</h1>
     <div class="wrapper">
         <header>
             <div class="top-header"></div>
@@ -107,6 +126,7 @@
                             <li><a href="javascript:void(0)">5_submenu</a></li>
                         </ul>
                     </li>
+                    
                 </ul>
 
             </nav>
