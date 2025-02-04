@@ -13,11 +13,9 @@
 
         /* layout */
         .layout-margin-360{
-            min-width:1280px;
             margin:0 360px;
         }
         .layout-padding-360{
-            min-width:1280px;
             padding:0 360px;
         }
 
@@ -35,6 +33,7 @@
             display:flex;
             justify-content: space-between;
             height:100%;
+            
         }
         .wrapper>header>nav>ul.main-menu>li{
             border : 1px solid green;
@@ -42,8 +41,8 @@
             height:100%;
             line-height:50px;
             text-align:center;
-            
             position:relative;
+           
         }
         .wrapper>header>nav>ul.main-menu>li>a{
             background-color: yellowgreen;
@@ -71,7 +70,7 @@
         }
 
         /* hover event */
-        .wrapper>header>nav>ul.main-menu>li:hover>ul.sub-menu{
+        .wrapper>header>nav>ul.main-menu:hover .sub-menu{
             display:block;
         }
 

@@ -12,15 +12,6 @@
         body{margin :0;}
 
         /* layout */
-        .layout-margin-360{
-            min-width:1280px;
-            margin:0 360px;
-        }
-        .layout-padding-360{
-            min-width:1280px;
-            padding:0 360px;
-        }
-
         .wrapper{}
         /* header */
         .wrapper>header{}
@@ -32,9 +23,12 @@
         /* main-menu */
         .wrapper>header>nav>ul.main-menu{
             border : 1px solid red;
-            display:flex;
-            justify-content: space-between;
+
+            /* display:flex;
+            justify-content: space-between; */
+            width:200px;
             height:100%;
+            
         }
         .wrapper>header>nav>ul.main-menu>li{
             border : 1px solid green;
@@ -42,8 +36,8 @@
             height:100%;
             line-height:50px;
             text-align:center;
-            
             position:relative;
+           
         }
         .wrapper>header>nav>ul.main-menu>li>a{
             background-color: yellowgreen;
@@ -54,10 +48,9 @@
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
             background-color: aqua;
             position:absolute;
-            left:0;
-            top:50px;
             width:100%;
-
+            left:200px;
+            top:0;
             display:none;
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
@@ -75,8 +68,6 @@
             display:block;
         }
 
-
-
         /* main  */
         .wrapper>main{}
         .wrapper>main>section{}
@@ -89,7 +80,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header"></div>
-            <nav class="layout-padding-360">
+            <nav>
                 <ul class="main-menu">
                     <li>
                         <a href="javascript:void(0)">1_mainmenu</a>
