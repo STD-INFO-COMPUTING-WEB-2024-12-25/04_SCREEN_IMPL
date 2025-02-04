@@ -58,18 +58,30 @@
 
       /* sub-menu */
       .wrapper > header > nav > ul.main-menu > li > ul.sub-menu {
+        display: flex;
         background-color: aqua;
       }
-      .wrapper > header > nav > ul.main-menu > li > ul.sub-menu > li {
+      .wrapper > header > nav > ul.main-menu > li > ul.sub-menu > div {
+        width: 100%;
         display: none;
+      }
+      .wrapper > header > nav > ul.main-menu > li > ul.sub-menu > div > li {
         position: relative;
         border: 1px solid rosybrown;
       }
-      .wrapper > header > nav > ul.main-menu > li > ul.sub-menu > li > a {
+      .wrapper > header > nav > ul.main-menu > li > ul.sub-menu > div > li > a {
         background-color: red;
         display: block;
       }
-      .wrapper > header > nav > ul.main-menu > li > ul.sub-menu > li > ul {
+      .wrapper
+        > header
+        > nav
+        > ul.main-menu
+        > li
+        > ul.sub-menu
+        > div
+        > li
+        > ul {
         display: none;
         position: absolute;
         background-color: wheat;
@@ -80,7 +92,13 @@
       }
 
       /* event */
-      .wrapper > header > nav > ul.main-menu > li:hover > ul.sub-menu > li {
+      .wrapper
+        > header
+        > nav
+        > ul.main-menu
+        > li:hover
+        > ul.sub-menu
+        > div.sub-menu-list {
         display: block;
       }
 
@@ -90,6 +108,7 @@
         > ul.main-menu
         > li
         > ul.sub-menu
+        > div.sub-menu-list
         > li:hover
         > ul {
         display: block;
@@ -115,33 +134,61 @@
             <li>
               <a href="javascript:void(0)">강아지 사료</a>
               <ul class="sub-menu">
-                <li>
-                  <a href="javascript:void(0)">브랜드별</a>
-                  <ul>
-                    <li><a href="javascript:void(0)">건강백서</a></li>
-                    <li><a href="javascript:void(0)">GO</a></li>
-                    <li><a href="javascript:void(0)">네츄럴시그니쳐</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">연령별</a>
-                  <ul>
-                    <li><a href="javascript:void(0)">전연령</a></li>
-                    <li><a href="javascript:void(0)">자견용</a></li>
-                    <li><a href="javascript:void(0)">성견용</a></li>
-                  </ul>
-                </li>
-                <li><a href="javascript:void(0)">임박할인</a></li>
+                <div class="sub-menu-list">
+                  <li>
+                    <a href="javascript:void(0)">브랜드별</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">건강백서</a></li>
+                      <li><a href="javascript:void(0)">GO</a></li>
+                      <li><a href="javascript:void(0)">네츄럴시그니쳐</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">연령별</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">전연령</a></li>
+                      <li><a href="javascript:void(0)">자견용</a></li>
+                      <li><a href="javascript:void(0)">성견용</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0)">임박할인</a></li>
+                </div>
+                <div class="sub-menu-image">
+                  <img
+                    src="https://polypark.kr/web/upload/appfiles/0zdpAngaKBFnlCcCqpCU4A/6a3ef7e1f41cf47060524e4bb4bc3d13.png"
+                    alt=""
+                  />
+                </div>
               </ul>
             </li>
             <li>
-              <a href="javascript:void(0)">고양이 사료</a>
+              <a href="javascript:void(0)">강아지 사료</a>
               <ul class="sub-menu">
-                <li><a href="javascript:void(0)">1_submenu</a></li>
-                <li><a href="javascript:void(0)">2_submenu</a></li>
-                <li><a href="javascript:void(0)">3_submenu</a></li>
-                <li><a href="javascript:void(0)">4_submenu</a></li>
-                <li><a href="javascript:void(0)">5_submenu</a></li>
+                <div class="sub-menu-list">
+                  <li>
+                    <a href="javascript:void(0)">브랜드별</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">건강백서</a></li>
+                      <li><a href="javascript:void(0)">GO</a></li>
+                      <li><a href="javascript:void(0)">네츄럴시그니쳐</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">연령별</a>
+                    <ul>
+                      <li><a href="javascript:void(0)">전연령</a></li>
+                      <li><a href="javascript:void(0)">자견용</a></li>
+                      <li><a href="javascript:void(0)">성견용</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0)">임박할인</a></li>
+                </div>
+                <div class="sub-menu-image">
+                  <img
+                    src="https://polypark.kr/web/upload/appfiles/0zdpAngaKBFnlCcCqpCU4A/6a3ef7e1f41cf47060524e4bb4bc3d13.png"
+                    alt=""
+                  />
+                </div>
               </ul>
             </li>
           </ul>
