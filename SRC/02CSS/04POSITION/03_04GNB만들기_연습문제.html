@@ -12,6 +12,12 @@
         body{margin :0;}
 
         /* layout */
+        .layout-1280{
+            width:1280px;
+            margin : 0 auto;
+        }
+        
+
         .wrapper{}
         /* header */
         .wrapper>header{}
@@ -22,35 +28,82 @@
         }
         /* main-menu */
         .wrapper>header>nav>ul.main-menu{
-            border : 1px solid red;
+            border : 1px solid black;
             display:flex;
             justify-content: space-between;
             height:100%;
+            
         }
         .wrapper>header>nav>ul.main-menu>li{
-            border : 1px solid green;
+            border : 1px solid black;
             width:100%;
             height:100%;
             line-height:50px;
             text-align:center;
+            position:relative;
+           
         }
         .wrapper>header>nav>ul.main-menu>li>a{
-            background-color: yellowgreen;
+            background-color: rgb(243, 250, 231);
             display:block;
         }
 
         /* sub-menu */
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
             background-color: aqua;
+            height:100%;
+            width:100%;
+            display:none;
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
-            border : 1px solid rosybrown;
+            border : 1px solid;
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
             
         }
         .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a{
-            background-color: red;
+            background-color:pink;
             display: block;
           
+        }
+
+        ul.sub-menu1{
+            background-color: pink;
+            position:absolute;
+            width:100%;
+            left:320px;
+            top:0;
+            display: none;
+        }
+        ul.sub-menu1>li{
+            border : 1px solid rosybrown;
+            
+        }
+        ul.sub-menu1>li>a{
+            background-color: wheat;
+            display: block;
+        }
+
+        /* hover event */
+        
+        .wrapper>header>nav>ul.main-menu>li:hover>ul.sub-menu {
+            display: block;
+        }
+
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li:hover>ul.sub-menu1 {
+            display: block;
+        }
+
+
+        .wrapper>header>nav>ul.main-menu>li:hover>ul.sub-menu {
+            display: block;
+        }
+
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li:hover>ul.sub-menu1 {
+            display: block;
         }
 
         /* main  */
@@ -61,14 +114,31 @@
     </style>
 </head>
 <body>
-    
+    <h1>폴리파크</h1>
     <div class="wrapper">
         <header>
             <div class="top-header"></div>
             <nav>
                 <ul class="main-menu">
                     <li>
-                        <a href="javascript:void(0)">1_mainmenu</a>
+                        <a href="javascript:void(0)">강아지 사료</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">브랜드명</a>
+                                <ul class="sub-menu1">
+                                    <li><a href="javascript:void(0)">건강백서</a></li>
+                                    <li><a href="javascript:void(0)">GO</a></li>
+                                    <li><a href="javascript:void(0)">네츄럴시그니처</a></li>
+                                    <li><a href="javascript:void(0)">네이처플랜</a></li>
+                                    <li><a href="javascript:void(0)">뉴웨이브</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0)">연령별</a></li>
+                            <li><a href="javascript:void(0)">임박할인</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">고양이 사료</a>
                         <ul class="sub-menu">
                             <li><a href="javascript:void(0)">1_submenu</a></li>
                             <li><a href="javascript:void(0)">2_submenu</a></li>
@@ -78,7 +148,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">2_mainmenu</a>
+                        <a href="javascript:void(0)">강아지 간식</a>
                         <ul class="sub-menu">
                             <li><a href="javascript:void(0)">1_submenu</a></li>
                             <li><a href="javascript:void(0)">2_submenu</a></li>
@@ -88,17 +158,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">3_mainmenu</a>
-                        <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">4_mainmenu</a>
+                        <a href="javascript:void(0)">고양이 간식</a>
                         <ul class="sub-menu">
                             <li><a href="javascript:void(0)">1_submenu</a></li>
                             <li><a href="javascript:void(0)">2_submenu</a></li>
@@ -112,9 +172,9 @@
             </nav>
         </header>
         <main>
-            <section></section>
+            <section>강아지귀여워</section>
         </main>
-        <footer></footer>
+        <footer>고양이 귀여워</footer>
     </div>
 </body>
 </html>
