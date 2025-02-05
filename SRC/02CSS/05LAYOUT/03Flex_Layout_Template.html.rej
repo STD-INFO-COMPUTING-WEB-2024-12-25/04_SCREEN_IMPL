@@ -1,0 +1,10 @@
+diff a/SRC/02CSS/05LAYOUT/03Flex_Layout_Template.html b/SRC/02CSS/05LAYOUT/03Flex_Layout_Template.html	(rejected hunks)
+@@ -4,7 +4,7 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
++    <title>해야하는것</title>
+     <style>
+         * {
+             box-sizing: border-box;
