@@ -36,7 +36,6 @@
 
       /* header */
       .wrapper > header {
-        height: 100px;
         background-color: lightblue;
       }
 
@@ -49,8 +48,6 @@
       }
 
       .wrapper > header > nav {
-        height: 50%;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -61,17 +58,50 @@
         flex-wrap: wrap;
       }
       .wrapper > header > nav > .nav-logo {
+        min-height: 80px;
+        border: 1px solid white;
+
+        display: flex;
+        flex-basis: 400px;
         flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 300px;
       }
       .wrapper > header > nav > ul.nav-menu {
+        height: 100%;
+        min-height: 80px;
+        border: 1px solid white;
+
+        flex-basis: 400px;
+        flex-grow: 1;
+        flex-shrink: 0;
+
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         gap: 10px;
       }
       .wrapper > header > nav > ul.nav-menu > li {
+        height: 100%;
+        border: 1px solid wheat;
+
+        flex-grow: 1;
+        flex-basis: 80px;
+        flex-shrink: 0;
+        min-height: 80px;
+      }
+
+      @media (max-width: 800px) {
+        .wrapper > header > nav > .nav-logo {
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          flex-direction: column;
+        }
+        .wrapper > header > nav > ul.nav-menu > li {
+          flex-direction: column;
+          min-height: 80px;
+          line-height: 80px;
+          font-size: 1.2rem;
+        }
       }
 
       /* main  */
@@ -82,9 +112,10 @@
       }
       .wrapper > main > section > .card-container {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         position: relative;
+
         flex-wrap: wrap;
         gap: 10px;
         padding: 0 10px;
@@ -92,11 +123,13 @@
       .wrapper > main > section > .card-container > .card {
         border: 1px solid;
         border-radius: 10px;
+
         flex-grow: 1;
         flex-shrink: 1;
-        flex-basis: 200px;
+        flex-basis: 475px;
         padding: 5px;
       }
+
       .container {
         border: 1px solid;
       }
