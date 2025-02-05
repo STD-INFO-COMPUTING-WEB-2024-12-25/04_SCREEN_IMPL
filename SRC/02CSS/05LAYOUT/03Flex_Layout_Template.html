@@ -8,7 +8,6 @@
     <style>
         * {
             box-sizing: border-box;
-
         }
 
         /* common */
@@ -26,24 +25,147 @@
         body {
             margin: 0;
         }
-
+        h3{
+            margin: 10px;
+        }
         /* layout */
         .wrapper {}
 
         /* header */
         .wrapper>header {}
 
-        .wrapper>header>.top-header {}
+        .wrapper>header>.top-header {
+            height: 60px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
 
-        .wrapper>header>nav {}
+        .wrapper>header>nav {
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.829);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .wrapper>header>nav>div {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        .wrapper>header>nav>ul {
+            font-size: 1.3rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 10px;
+        }
+       
+        .wrapper>header>nav>ul>li {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         /* main  */
-        .wrapper>main {}
+        .wrapper>main {
+        }
 
-        .wrapper>main>section {}
-
+        .wrapper>main>section {
+            display: block;
+            margin: 10px;
+        }
+        .wrapper>main>section>div{
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 12px;
+            display: flex;
+            text-align: center;
+            justify-content: start;
+        }
+        /* 카드 */
+        .wrapper>main>section>div>.card{
+            margin: 5px;
+            height: 80px;
+            box-shadow: 2px 2px 5px lightgrey;
+            border-radius: 10px;
+        }
+        .card-container{
+            padding: 5px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+        }
+        .wrapper>main>section>div>.card>h3{
+            white-space: nowrap;
+            text-align: center;
+            justify-content: center;
+            margin-top: 5px;
+        }
+        .wrapper>main>section>div>.card:nth-child(1){
+            flex-basis: 300px;
+        }
+        .wrapper>main>section>div>.card:nth-child(2){
+            flex-basis: 300px;
+        }
+        .wrapper>main>section>div>.card:nth-child(3){
+            flex-basis: 300px;
+        }
+        /* 미디어 */
+        .wrapper>main>section>.container{
+            display: flex;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+        }
+        .wrapper>main>section>.container:nth-child(1){
+            flex-basis: 400px;
+        }
+        .wrapper>main>section>div>.media-item{
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+            margin: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .media-img{
+            height: 150px;
+            width: 200px;
+            min-width: 200px;
+            background-color: lightgray;
+        }
+        .wrapper>main>section>div>.media-item>.media-contents{
+            border: 1px solid ;
+            justify-content: left;
+        }
+        @media(max-width:500px){
+            .wrapper>main>section>div>.media-item{
+                display: block;
+            }
+            .media-img{
+                width: 80vw;
+                height: calc(50vh - 80vw);
+            }
+        }
         /* footer */
-        .wrapper>footer {}
+        .footer{
+            display: block;
+            border: 1px solid lightgray;
+            margin: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.719);
+        }
+        .footer>div {
+            align-items: center;
+            color: white;
+        }
+        .wrapper>footer>div>p {
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -52,7 +174,7 @@
     <div class="wrapper">
         <header>
             <div class="top-header">
-                1. 네비게이션 바 레이아웃
+                <h3>1. 네비게이션 바 레이아웃</h3>
             </div>
             <nav>
                 <div class="nav-logo">Logo</div>
@@ -65,7 +187,6 @@
             </nav>
         </header>
         <main>
-
             <section>
                 <h2>2. 카드 레이아웃</h2>
                 <div class="card-container">
@@ -87,14 +208,16 @@
                 <h2>3. 미디어 컨텐츠 레이아웃</h2>
                 <div class="container">
                     <div class="media-item">
-                        <div class="media-img"></div>
+                        <div class="media-img">
+                        </div>
                         <div class="media-content">
                             <h3>뉴스 제목</h3>
                             <p>뉴스 내용이 들어갑니다. 이미지와 텍스트가 나란히 배치되는 레이아웃입니다.</p>
                         </div>
                     </div>
                     <div class="media-item">
-                        <div class="media-img"></div>
+                        <div class="media-img">
+                        </div>
                         <div class="media-content">
                             <h3>블로그 포스트</h3>
                             <p>블로그 내용이 들어갑니다. 모바일에서는 세로로 배치됩니다.</p>
