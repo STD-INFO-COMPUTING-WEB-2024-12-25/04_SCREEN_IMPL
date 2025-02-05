@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline-style: none;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+            vertical-align: middle;
+        }
+
+        html {
+            user-select: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* layout */
+        .wrapper {
+            position: relative;
+        }
+
+        /* header */
+        header {
+            position: relative;
+            
+        }
+
+        .top-header {
+            position: relative;
+            height: 50px;
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+        }
+
+        .nav-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100%;
+            color: #fff;
+            background: #333;
+        }
+
+        .nav-menu {
+            position: relative;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            height: 100%;
+            flex: 3;
+            background: #333;
+            color: #fff;
+        }
+
+        .nav-menu>li {
+            margin-right: 10px;
+        }
+
+        /* main  */
+        main {
+            position: relative;
+            height: 800px;
+        }
+
+        section {
+            position: relative;
+        }
+
+        section>h2 {
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .card-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 200px;
+        }
+
+        .card {
+            margin: 0 15px;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+
+        .container {
+            position: relative;
+            padding: 10px 10px;
+            margin: 20px 30px;
+            border: 1px solid #ccc;
+        }
+
+        .media-item {
+            position: relative;
+            display: flex;
+            padding: 20px 15px;
+        }
+
+        .media-img {
+            width: 150px;
+            height: 150px;
+            background: #ccc;
+        }
+
+        .media-content {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .media-content>h3 {
+            margin-bottom: 5px;
+        }
+
+        /* footer */
+        footer {
+            height: 100px;
+
+        }
+
+        footer>h2 {
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .footer {
+            position: relative;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            background: #333;
+        }
+
+        .footer-section {
+            margin: 0 15px;
+            color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="top-header">
+                <h2>1. 네비게이션 바 레이아웃</h2>
+            </div>
+            <nav>
+                <div class="nav-logo">Logo</div>
+                <ul class="nav-menu">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>2. 카드 레이아웃</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Product 1</h3>
+                        <p>상품 설명이 들어갑니다. 실무에서 자주 사용되는 카드 형태의 레이아웃입니다.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Product 2</h3>
+                        <p>반응형으로 구현되어 화면 크기에 따라 자동으로 배치가 조절됩니다.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Product 3</h3>
+                        <p>flex-wrap과 flex-basis를 활용하여 유동적인 레이아웃을 구현했습니다.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>3. 미디어 컨텐츠 레이아웃</h2>
+                <div class="container">
+                    <div class="media-item">
+                        <div class="media-img"></div>
+                        <div class="media-content">
+                            <h3>뉴스 제목</h3>
+                            <p>뉴스 내용이 들어갑니다. 이미지와 텍스트가 나란히 배치되는 레이아웃입니다.</p>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <div class="media-img"></div>
+                        <div class="media-content">
+                            <h3>블로그 포스트</h3>
+                            <p>블로그 내용이 들어갑니다. 모바일에서는 세로로 배치됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+        <footer>
+            <h2>4. 반응형 푸터</h2>
+            <footer class="footer">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>회사 소개 내용이 들어갑니다.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>연락처 정보가 들어갑니다.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>소셜 미디어 링크가 들어갑니다.</p>
+                </div>
+            </footer>
+        </footer>
+    </div>
+</body>
+
+</html>
