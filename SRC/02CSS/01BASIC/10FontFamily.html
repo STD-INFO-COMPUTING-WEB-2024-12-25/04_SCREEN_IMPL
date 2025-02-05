@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .block1{
+            font-family: "Roboto Condensed", serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+        /* 글꼴 등록 */
+        @font-face{
+            font-family: "custom-font-01";
+            src: url(./fonts/42dot_Sans/static/42dotSans-Regular.ttf);
+            font-style: normal;
+        }
+        @font-face{
+            font-family: "custom-font-02";
+            src: url("./fonts/NanumGaRamYeonGgoc.ttf");
+            font-style: normal;
+        }        
+        @font-face{
+            font-family: "custom-font-03";
+            src: url("./fonts/Tenada.ttf");
+            font-style: normal;
+        }    
+        body{
+            font-family: 'custom-font-01 custom-font-02 custom-font-03';
+        }
+    </style>
+</head>
+
+<body>
+    <div style="font-family: 'Times New Roman', Times, serif;">HELLOWORLD</div>
+    <div class="block1">HELLOWORLD</div>
+    <div style="font-family: custom-font-01; font-weight: 200;">HELLOWORLD</div>
+    <div style="font-family: custom-font-02; font-weight: 800;">HELLOWORLD</div>
+    <div style="font-family: custom-font-03; font-weight: 400;">HELLOWORLD</div>
+
+    <hr/>
+    <div>HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+    <div>HELLOWORLD</div>
+</body>
+
+</html>
