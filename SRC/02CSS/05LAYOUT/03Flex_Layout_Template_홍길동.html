@@ -77,19 +77,21 @@
             border: 1px solid;
             gap: 20px;
             font-size: 1rem;
-           
+            flex-basis: 768px;
+
+            flex-shrink: 0;
             flex-grow: 1;
 
 
-
         }
+
         .wrapper>header>nav>.nav-menu>li {
             flex-grow: 0;
             flex-basis: 400px;
             flex-shrink: 0;
 
-            height: 70px;
-           
+            min-height: 80px;
+
         }
 
         /* main  */
@@ -109,12 +111,17 @@
             align-items: center;
             gap: 30px;
 
+            flex-wrap: wrap;
+
+
         }
 
         .wrapper>main>section:nth-child(1)>.card-container>.card {
             border: 1px solid;
             padding: 20px;
             border-radius: 10px;
+
+            flex-basis: 450px;
         }
 
         /*  */
@@ -151,17 +158,15 @@
         .wrapper>main>section:nth-child(2)>.container>.media-item>.media-content>p {}
 
         /* footer */
-        .wrapper>footer {
-            
-
-        }
+        .wrapper>footer {}
 
         .wrapper>footer>h2 {
             padding: 0 20px;
         }
+
         .wrapper>footer>.footer-section-block {
-            min-height:150px;
-            display:flex;
+            min-height: 150px;
+            display: flex;
             justify-content: left;
             align-items: center;
 
@@ -171,17 +176,42 @@
         }
 
         .wrapper>footer>.footer-section-block>.footer-section {
-            width : 100%;
+            width: 100%;
         }
 
         .wrapper>footer>.footer-section-block>.footer-section>h3 {
-            font-size : 1.5rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom :10px;
+            margin-bottom: 10px;
         }
 
         .wrapper>footer>.footer-section-block>.footer-section>p {
-            margin-top : 0;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper>header>nav {
+
+                flex-direction: column;
+
+            }
+
+            .wrapper>header>nav>.nav-logo {}
+
+            .wrapper>header>nav>.nav-menu {
+                flex-direction: column;
+            }
+
+            .wrapper>header>nav>.nav-menu>li {
+                min-height: 80px;
+                line-height: 80px;
+                font-size: 1.2rem;
+            }
+
+            .wrapper>main>section:nth-child(1)>.card-container>.card {
+                
+            }
+
         }
     </style>
 </head>
