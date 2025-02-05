@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        .btn{
-            display:block;
-            width : 85px;
-            height : 35px;
-            border-radius: 12px;
-            font-size : 0.9rem;
-            line-height : 35px;
-            text-align : center;
+        a{
             text-decoration: none;
+            color:black
+        }
+        .btn {
+            /* block 태그전환 */
+            display:block;
+            /* 가로 세로 */
+            /* width:100px; */
+            min-width: 80px;
+            max-width: 150px;
+            width : auto;
+            height:35px;
+            /* 테두리 */
+            border : none;
+            border-radius: 12px;
+            /* 글자 크기 */
+            font-size : .9rem;
+            font-weight: 600;
+            /* 그림자 */
+            box-shadow: 5px 5px 5px lightgray;
+            /* 배치(가운데) */
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            /* 여백 */
+            margin : 10px;
+            /* 글자색 */
             color : white;
-            box-shadow: 3px 3px 3px lightgray;
-            margin : 5px;
-            font-weight : 500;
         }
         .btn-primary{
-            background-color : royalblue;
+            background-color: royalblue;
         }
-        .btn-primary:hover{
-            opacity: 0.8;
+        .btn-secondary{
+            background-color: orange;
         }
     </style>
 </head>
-<body>
-    
 
-    <a class="" href="./03Ul_List.html">03Ul_List.html 이동</a><br>
-    <a href="./03Ul_List.html" target="_blank">03Ul_List.html 이동</a><br>
-    <a href="http://naver.com">NAVER이동</a> <br/>
-    <a href="" class="btn btn-primary">버튼</a>
+<body>
+
+    <a href="./02BASIC.html" class="btn btn-secondary">TEST1</a>
+    <a href="https://naver.com"class="btn btn-primary">NAVER</a>
+    <a href="https://naver.com" target="_blank">네이버_새탭열기</a>
     <hr>
     <div>
-        <a href="https://www.daum.net/" target="frm1">DAUM이동</a>
+        <a href="02BASIC.html" target="frm1">02BASIC.html으로 이동</a>
+        <a href="https://www.daum.net" target="frm1">다음으로 이동</a>
     </div>
-    <iframe width="400px" height="400px" name="frm1"></iframe>
-    
-    <a href="javascript:void(0)">버튼</a>
-    <a href="#" >버튼</a>
-
+    <iframe name="frm1" src="" frameborder="0" width="400px" height="400px" style="border: 2px solid #000;">
+        
+    </iframe>
 </body>
+
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 네비게이션 바</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+        .navbar ul li {
+            margin: 0 10px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        .navbar ul li a:hover {
+            background-color: #555;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+            .navbar ul.active {
+                display: flex;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 style="color: white;">로고</h1>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">포트폴리오</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar ul').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

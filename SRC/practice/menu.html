@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀스크린 네비게이션</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            background: none;
+            border: none;
+            outline: none;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .menu a {
+            color: white;
+            font-size: 24px;
+            margin: 20px;
+            text-decoration: none;
+        }
+        .menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <div class="menu">
+        <a href="#">홈</a>
+        <a href="#">서비스</a>
+        <a href="#">포트폴리오</a>
+        <a href="#">문의하기</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

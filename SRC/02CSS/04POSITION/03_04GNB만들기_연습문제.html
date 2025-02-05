@@ -1,112 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
+        * {
+            box-sizing: border-box;
+        }
+
         /* common */
-        a{ text-decoration: none;color:black;}
-        ul{list-style: none;margin:0;padding :0;}
-        body{margin :0;}
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+        }
 
         /* layout */
-        .wrapper{}
+        .wrapper {}
+
         /* header */
-        .wrapper>header{}
-        .wrapper>header>.top-header{}
-        
-        .wrapper>header>nav{
-            height:50px;
-        }
-        /* main-menu */
-        .wrapper>header>nav>ul.main-menu{
-            border : 1px solid red;
-            display:flex;
-            justify-content: space-between;
-            height:100%;
-        }
-        .wrapper>header>nav>ul.main-menu>li{
-            border : 1px solid green;
-            width:100%;
-            height:100%;
-            line-height:50px;
-            text-align:center;
-        }
-        .wrapper>header>nav>ul.main-menu>li>a{
-            background-color: yellowgreen;
-            display:block;
+        .wrapper>header {}
+
+        .wrapper>header>.top-header {}
+
+        .wrapper>header>nav {
+            height: 50px;
         }
 
-        /* sub-menu */
-        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu{
-            background-color: aqua;
-        }
-        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li{
-            border : 1px solid rosybrown;
+        /* main-menu */
+        .wrapper>header>nav>ul.main-menu {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
             
         }
-        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a{
-            background-color: red;
-            display: block;
-          
+
+        .wrapper>header>nav>ul.main-menu>li {
+            width: 100%;
+            height: 100%;
+            line-height: 50px;
+            text-align: center;
         }
 
+        .wrapper>header>nav>ul.main-menu>li>a {
+            background-color: none;
+            display: block;
+        }
+        /* sub-menu */
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu {
+            position: relative;
+            display: none;
+            width: 80px;
+            height: 52px;
+            border: 1px solid;
+        }
+        
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li {
+            
+            position: relative;
+        }
+        
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a {
+            display: block;
+            
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>ul.sub2-menu{
+            position: absolute;
+            width: 300px;
+            left: 100%;
+            display: none;
+            top: 0;
+        }
+        /* 메인메뉴 호버링 >> 메인메뉴 디자인 변경 */
+        .wrapper>header>nav>ul.main-menu:hover .sub-menu{
+            border-top: 2px solid;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>ul.sub2-menu>li{
+            position: relative;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>ul.sub2-menu>li>a{
+            display: block;
+        }
         /* main  */
-        .wrapper>main{}
-        .wrapper>main>section{}
+        .wrapper>main {}
+        
+        .wrapper>main>section {}
+        
         /* footer */
-        .wrapper>footer{}
+        .wrapper>footer {}
+        /* hover effect */
+        .wrapper>header>nav>ul.main-menu>li:hover ul.sub-menu{
+            display: block;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li:hover ul.sub2-menu{
+            display: block;
+        }
     </style>
 </head>
+
 <body>
-    <h1>- 홍길동 - </h1>
+
     <div class="wrapper">
         <header>
             <div class="top-header"></div>
             <nav>
                 <ul class="main-menu">
                     <li>
-                        <a href="javascript:void(0)">1_mainmenu</a>
+                        <!-- ul.sub2-menu>li*5>a[href="javascript:void(0)"]{$ sub2 menu} -->
+                        <a href="javascript:void(0)">강아지 사료</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li>
+                                <a href="javascript:void(0)">브랜드 별 +</a>
+                                <ul class="sub2-menu">
+                                    <li><a href="javascript:void(0)">1 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">2 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">3 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">4 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">5 sub2 menu</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">연령 별 +</a>
+                                <ul class="sub2-menu">
+                                    <li><a href="javascript:void(0)">1 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">2 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">3 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">4 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">5 sub2 menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0)">임박할인</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">2_mainmenu</a>
+                        <a href="javascript:void(0)">고양이 사료</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">브랜드 별 +</a>
+                                <ul class="sub2-menu">
+                                    <li><a href="javascript:void(0)">1 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">2 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">3 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">4 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">5 sub2 menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0)">연령 별 +</a>
+                                <ul class="sub2-menu">
+                                    <li><a href="javascript:void(0)">1 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">2 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">3 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">4 sub2 menu</a></li>
+                                    <li><a href="javascript:void(0)">5 sub2 menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(0)">임박할인</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">3_mainmenu</a>
+                        <a href="javascript:void(0)">강아지 간식</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">브랜드 별</a></li>
+                            <li><a href="javascript:void(0)">연령 별</a></li>
+                            <li><a href="javascript:void(0)">임박할인</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">4_mainmenu</a>
+                        <a href="javascript:void(0)">고양이 간식</a>
                         <ul class="sub-menu">
-                            <li><a href="javascript:void(0)">1_submenu</a></li>
-                            <li><a href="javascript:void(0)">2_submenu</a></li>
-                            <li><a href="javascript:void(0)">3_submenu</a></li>
-                            <li><a href="javascript:void(0)">4_submenu</a></li>
-                            <li><a href="javascript:void(0)">5_submenu</a></li>
+                            <li><a href="javascript:void(0)">브랜드 별</a></li>
+                            <li><a href="javascript:void(0)">연령 별</a></li>
+                            <li><a href="javascript:void(0)">임박할인</a></li>
                         </ul>
                     </li>
+                </ul>
+                </li>
+               
                 </ul>
 
             </nav>
@@ -117,4 +196,5 @@
         <footer></footer>
     </div>
 </body>
+
 </html>

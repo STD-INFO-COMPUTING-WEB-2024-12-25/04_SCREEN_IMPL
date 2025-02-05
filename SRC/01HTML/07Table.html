@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <!-- Table Sementic -->
-    <!-- tbody : 바디 , thead : 헤더  , tfoot : 푸터 -->
+
+    <!-- table sementic(구조) 태그 -->
+    <!-- thead : 테이블 머리말, tbody : 테이블 본문, tfoot : 테이블 꼬리말 -->
     <style>
-        td,th{width : 35px; height : 35px; border : 1px solid;}
-        tbody {background-color : royalblue}
-        tfoot {background-color : orange}
-        thead{background-color : rosybrown}
+        td {
+            width: 35px;
+            height: 35px;
+            border: 2px solid;
+            border-color: black;
+            text-align: center;
+        }
+        thead{
+            background-color: royalblue;
+        }
+        tbody{
+            background-color: orange;   
+        }
+        tfoot{
+            background-color: aqua;
+        }
     </style>
     <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
         <tbody>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
         </tbody>
         <tfoot>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
         </tfoot>
-
-
-        <thead>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-        </thead>
     </table>
 
+
+
 </body>
+
 </html>
