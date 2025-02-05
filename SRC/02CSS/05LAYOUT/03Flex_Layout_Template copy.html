@@ -35,9 +35,6 @@
             border: 1px solid;
         }
 
-        /* header */
-        .wrapper>header {}
-
         /* top-header */
         .wrapper>header>.top-header {
             height: 50;
@@ -47,9 +44,14 @@
             margin: 30px;
             font-weight: bold;
             text-align: left;
-            
+
 
         }
+
+        /* header */
+        .wrapper>header {}
+
+
 
         .wrapper>header>nav {
             height: 20;
@@ -59,6 +61,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 15px;
+            flex-wrap: wrap;
 
 
 
@@ -66,15 +69,15 @@
 
         .wrapper>header>nav>.nav-logo {
             color: white;
-         font-size: 1.5rem;
-         font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: bold;
 
         }
 
         .wrapper>header>nav>.nav-menu {
             color: white;
             font-size: 1rem;
-            justify-content:center;
+            justify-content: center;
             display: flex;
         }
 
@@ -86,13 +89,47 @@
         /* main  */
         .wrapper>main {}
 
-        .wrapper>main>section {}
-        .wrapper>main>section>.card-container {}
+        .wrapper>main>section {
+            width: 100%;
+            margin: 10px;
+
+        }
+
+
+
         .wrapper>main>section>.card-container {
             display: flex;
-            justify-content: center;
-            
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px;
+
         }
+
+        .wrapper>main>section>.card-container>.card {
+            background-color: gray;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px black;
+            color: white;
+
+
+        }
+
+        .wrapper>main>section>.container {
+            display: flex;
+            background-color: white;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .wrapper>main>section>.container>.midia-item {}
+
+        .wrapper>main>section>.container>.midia-item>.midia-img {}
+
+        .wrapper>main>section>.container>.midia-item>.content {}
 
         /* footer */
         .wrapper>footer {}

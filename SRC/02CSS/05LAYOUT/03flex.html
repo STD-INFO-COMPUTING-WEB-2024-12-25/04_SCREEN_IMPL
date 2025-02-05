@@ -32,6 +32,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-logo {
@@ -55,8 +56,25 @@
             text-decoration: underline;
         }
 
-        /* Card Layout */
-        .card-container {
+        @media (max-width: 768px) {
+            .wrapper > header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Card Boxes */
+        .card-boxes {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -64,7 +82,7 @@
             padding: 20px;
         }
 
-        .card {
+        .card-box {
             background: white;
             padding: 20px;
             width: 300px;
@@ -128,16 +146,16 @@
         <main>
             <section>
                 <h2>Card Layout</h2>
-                <div class="card-container">
-                    <div class="card">
+                <div class="card-boxes">
+                    <div class="card-box">
                         <h3>Product 1</h3>
                         <p>상품 설명이 들어갑니다.</p>
                     </div>
-                    <div class="card">
+                    <div class="card-box">
                         <h3>Product 2</h3>
                         <p>반응형 카드 레이아웃입니다.</p>
                     </div>
-                    <div class="card">
+                    <div class="card-box">
                         <h3>Product 3</h3>
                         <p>유동적인 디자인을 제공합니다.</p>
                     </div>
