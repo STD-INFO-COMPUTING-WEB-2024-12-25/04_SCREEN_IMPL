@@ -67,6 +67,19 @@
             align-items: center;
             gap: 20px;
             font-size: 1rem;
+           
+            flex-grow: 1;
+
+
+
+        }
+        .wrapper>header>nav>.nav-menu>li {
+            flex-grow: 0;
+            flex-basis: 400px;
+            flex-shrink: 0;
+
+            height: 70px;
+           
         }
 
         /* main  */
@@ -87,14 +100,15 @@
             gap: 30px;
 
             flex-wrap: wrap;
+
+
+            flex-wrap: wrap;
         }
 
         .wrapper>main>section:nth-child(1)>.card-container>.card {
             border: 1px solid;
             padding: 20px;
             border-radius: 10px;
-            flex-shrink: 0;
-            flex-basis : 480px;
         }
 
         /*  */
@@ -159,33 +173,7 @@
         }
 
         .wrapper>footer>.footer-section-block>.footer-section>p {
-            margin-top: 0;
-        }
-
-
-        @media (max-width: 1080px) {
-            .wrapper>header>nav {
-                /* add */
-                flex-direction: column;
-            }
-
-            .wrapper>header>nav>.nav-logo {}
-
-            .wrapper>header>nav>.nav-menu {
-                flex-direction: column;
-            }
-
-            .wrapper>header>nav>.nav-menu>li {
-                min-height: 80px;
-                line-height: 80px;
-                font-size: 1.2rem;
-            }
-
-            .wrapper>main>section:nth-child(1)>.card-container>.card{
-                flex-shrink: 0;
-                flex-basis: 100%;
-              
-            }
+            margin-top : 0;
         }
     </style>
 </head>
