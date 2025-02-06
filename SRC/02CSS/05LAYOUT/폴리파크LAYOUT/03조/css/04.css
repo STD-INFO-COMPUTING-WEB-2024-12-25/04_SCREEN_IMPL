@@ -60,7 +60,7 @@ content>.dog>a>img{
 }
 
 content>.dog>a>img:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: transform .5s;
 }
 
