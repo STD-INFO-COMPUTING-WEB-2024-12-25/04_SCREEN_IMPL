@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e0517bea35cb53714dc1c08ef6f667b8de1e2ab
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +12,7 @@
         *{
             box-sizing: border-box;
         }
+<<<<<<< HEAD
         body{
             display: flex;
             justify-content: center;
@@ -15,27 +20,48 @@
             height: 100vh;
         }
         .container{
+=======
+        body {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .container {
+>>>>>>> 0e0517bea35cb53714dc1c08ef6f667b8de1e2ab
             width: 150px;
             height: 150px;
             position: relative;
             /* 원근법 설정! */
             perspective: 1000px;
         }
+<<<<<<< HEAD
 
         .item{
+=======
+        .item {
+>>>>>>> 0e0517bea35cb53714dc1c08ef6f667b8de1e2ab
             position: absolute;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
+<<<<<<< HEAD
             background-color: orange;
             transition: 1s;
             /* 자식요소들에게 3d효과를 전파 */
             transform-style: preserve-3d;
+=======
+            /* background-color: orange; */
+            transition: 1s;
+            /* 자식요소들에게 3d효과를 전파 */
+            transform-style:preserve-3d;
+>>>>>>> 0e0517bea35cb53714dc1c08ef6f667b8de1e2ab
             transition: 1s;
         }
         .item>.front,
         .item>.back{
+<<<<<<< HEAD
             width: 100%;
             height: 100%;
             position: absolute;
@@ -47,12 +73,45 @@
     </style>
 </head>
 <body>
+=======
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            border-radius: 50%;
+            border:1px solid;
+            /* 회전시 뒷면은 표시 안함 */
+            backface-visibility: hidden;
+        }
+        .item>.front{
+            background-color: orange;
+        }
+        .item>.back{
+            background-color: royalblue;
+            transform: rotateY(180deg);
+        }
+        .container:hover .item{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+>>>>>>> 0e0517bea35cb53714dc1c08ef6f667b8de1e2ab
     <div class="container">
         <div class="item">
             <div class="front"></div>
             <div class="back"></div>
         </div>
     </div>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+
+</body>
+
+>>>>>>> 0e0517bea35cb53714dc1c08ef6f667b8de1e2ab
 </html>
