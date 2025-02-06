@@ -219,6 +219,7 @@ body::-webkit-scrollbar{
     align-items: center;
 }
 
+
 .wrapper>header>nav>ul.mainmenu>li.left-site>ul.submenu{
     position:absolute;
     /* -480px 은 layout-basic 의 240px 의 2배수 */
