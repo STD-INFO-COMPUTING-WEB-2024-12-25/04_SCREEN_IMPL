@@ -1,0 +1,182 @@
+/* 네비게이션 */
+.dog-nev {
+    margin: 0 20px;
+}
+
+.top-header-left {
+    float: left;
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.top-header-right {
+    float: right;
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+/* 메인 */
+
+/* 타이틀 */
+main{
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    margin: 120px 400px;
+}
+.main_title {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.main_title>ul {
+    padding: 70px 70px;
+    display: flex;
+    gap: 10px;
+}
+
+.title_font {
+    width: 80px;
+    font-size: 1.5rem;
+}
+
+.good_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.good_count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+}
+
+/* 상품목록 */
+
+content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    gap: 50px;
+}
+
+.item_store {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    font-size: 15px;
+
+}
+
+.item_img {
+    padding-bottom: 10px;
+    display: flex;
+    transform: scale(1.0);
+    transition: transform .5s;
+
+}
+
+.item_img:hover {
+    padding-bottom: 10px;
+    display: flex;
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+.item_name {
+    padding: 0px 20px 10px 0px;
+    margin-bottom: 20px;
+    width: 256px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    font-weight: 500;
+
+    align-items: start;
+    justify-items: start;
+}
+
+.item_price {
+    padding: 0px 20px 10px 0px;
+    width: 256px;
+    justify-content: start;
+    align-items: start;
+}
+
+.item_price>.consumer {
+    margin-bottom: 5px;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.item_price>.seller {
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.item_price>.inventory {
+    color: gray;
+
+}
+
+/* 페이지 */
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    
+}
+.page>ul{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 50px;
+}
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.page>ul:nth-child(3){
+    text-align: center;
+}
+
+
+/* 화면크기별 레이아웃 */
+@media (max-width : 1280px) {
+    content {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width : 900px) {
+    content {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width : 700px) {
+    content {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
