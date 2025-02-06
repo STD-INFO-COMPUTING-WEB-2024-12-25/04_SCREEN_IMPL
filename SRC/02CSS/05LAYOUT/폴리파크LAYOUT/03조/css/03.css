@@ -1,3 +1,15 @@
+/* 헤더 */
+header{
+    border-bottom: 1px solid rgb(241, 241, 241);
+}
+header>.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+}
+
 /* 네비게이션 */
 .dog-nev {
     margin: 0 20px;
@@ -89,7 +101,7 @@ content {
 }
 
 .item_img {
-    padding-bottom: 10px;
+    margin-bottom: 40px;
     display: flex;
     transform: scale(1.0);
     transition: transform .5s;
@@ -97,9 +109,7 @@ content {
 }
 
 .item_img:hover {
-    padding-bottom: 10px;
-    display: flex;
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: transform .5s;
 }
 .item_name {
@@ -157,10 +167,45 @@ content {
     align-items: center;
     font-size: 15px;
 }
-.page>ul:nth-child(3){
-    text-align: center;
-}
 
+/* 푸터 */
+footer{
+    padding: 20px;
+    height: 200px;
+    background-color: rgb(247, 245, 243);
+    flex-direction: column;
+    gap: 30px;
+}
+.footer_logo{
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+    left: -180px;
+}
+.info{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info>ul{
+    color: gray;
+    gap: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -160px;
+}
+.footer_logo>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info_hr{
+    color: rgb(189, 189, 189);
+}
 
 /* 화면크기별 레이아웃 */
 @media (max-width : 1280px) {
