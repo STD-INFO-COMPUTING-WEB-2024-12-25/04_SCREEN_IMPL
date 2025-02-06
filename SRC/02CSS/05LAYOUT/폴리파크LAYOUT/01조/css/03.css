@@ -34,7 +34,6 @@ main {
     content: "|";
     padding: 0 10px;
 }
-
 .main-nav>.main-menu>.menu-right>li:first-child::before {
     content: none;
 }
@@ -114,6 +113,12 @@ main {
     content: "|";
     margin-left: 10px;
 }
+@media(max-width:850px){
+    .contents-nav>.con-right>li{
+        display: none;
+    }
+}
+/* 상품 */
 .product-list{
     display: flex;
     flex-wrap: wrap;
