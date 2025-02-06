@@ -31,6 +31,109 @@
 
 
 
+    <style>
+        section {}
+
+
+        /* 네비게이션 */
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 19px;
+            border: 1px solid;
+
+        }
+
+
+        .navigation-layer {
+            display: flex;
+            gap: 10px;
+
+        }
+
+        .navigation-layer a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sub-category {
+            /* border: 1px solid; */
+        }
+
+        /* 제목 스타일 */
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 70px 0px 70px;
+            font-size: 18px;
+        }
+
+        /* 버튼 스타일 */
+        button {
+            all: unset;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* 반응형 정렬 */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .media-item {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 프로덕트 카테고리  */
+        .product-category {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 19px;
+            border: 1px solid;
+        }
+
+        .pc-left a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .pc-left p {
+            margin: 0;
+        }
+
+        .product-category button {
+            all: unset;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            background: #f8f8f8;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
 
 
 </head>
@@ -114,7 +217,7 @@
                                     <li><a href="">건강백서</a></li>
                                     <li><a href="">GO</a></li>
                                     <li><a href="">네츄럴시그니처</a></li>
-                                    <li><a href="">추가해서작업!</a></li>
+                                    <li><a href="">네이처플랜</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -951,7 +1054,83 @@
             </nav>
         </header>
         <main>
-            <section></section>
+            <section>
+                <div>
+                    <div class="nav-wrapper">
+                        <ul layout="layout-fixed">
+                            <li>
+                                <a href="">HOME</a>
+                                <a href="">강아지사료</a>
+                                <a href="">브랜드별</a>
+                                <a href="">네이처플랜</a>
+                            </li>
+                        </ul>
+
+                        <!-- 마이페이지 -->
+                        <div class="navigation-layer">
+                            <a href="">MY</a>
+                            <a href="">HELP</a>
+                            <a href="">QUICK</a>
+                        </div>
+                    </div>
+
+                    <h2 class="title">
+                        <span>네이처플랜</span>
+                        <button type="button">
+                            <img src="https://www.polypark.kr/web/upload/icon_202007031831569000.png" alt="아이콘">
+                            <strong>
+                                <span class="like dog-count">0</span>
+                            </strong>
+                        </button>
+                    </h2>
+                </div>
+
+                <div class="sub-category"></div>
+
+                <div class="product-category">
+                    <div class="pc-left">
+                        <a href="">
+                            <strong>8</strong> PRODUCT RESULT
+                        </a>
+                        <p>
+                            <button>
+                                <span>COMPARE</span>
+                            </button>
+                        </p>
+
+                    </div>
+                   <div class="pc-right">
+
+                    <a href="">NEW</a>
+                    <a href="">LOW</a>
+                    <a href="">HIGH</a>
+                    <a href="">POPULAR</a>
+
+                   </div>
+                </div>
+
+                <div class="container">
+                    <div class="media-item">
+                        <div class="media-content">
+                            <h3>네이처플랜_피부건강2kg</h3>
+                            <p>19,800원</p>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <div class="media-content">
+                            <h3>네이처플랜_피부건강2kg</h3>
+                            <p>19,800원</p>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <div class="media-content">
+                            <h3>네이처플랜_체지방감소2kg</h3>
+                            <p>19,800원</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
         </main>
         <footer></footer>
     </div>
