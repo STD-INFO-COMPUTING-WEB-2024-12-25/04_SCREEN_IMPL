@@ -1,0 +1,152 @@
+main {
+    max-width: 1260px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 1 메인 네비 */
+.main-nav {
+    display: block;
+}
+
+/* 2 메인메뉴 */
+.main-nav>.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 19px;
+    font-size: 9px;
+}
+
+.main-nav>.main-menu>.menu-left>li::before {
+    content: ">";
+    padding: 0 10px;
+}
+
+.main-nav>.main-menu>.menu-left>li:first-child::before {
+    content: none;
+}
+
+.main-nav>.main-menu>.menu-right>li::before {
+    content: "|";
+    padding: 0 10px;
+}
+
+.main-nav>.main-menu>.menu-right>li:first-child::before {
+    content: none;
+}
+
+.main-nav>.main-menu ul {
+    display: flex;
+}
+
+
+/* 2 메인 네임 */
+.main-name{
+    display: flex;
+    height: 125px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.main-name>span{
+    font-size: 20px;
+}
+.main-name>button{
+    border: none;
+    background-color: white;
+}
+.main-name>span:nth-child(3){
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 1 메인 컨텐츠 */
+.main-contents{
+}
+.main-contents>.contents-nav{
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents-nav>.con-left{
+    display: flex;
+    font-size: 9px;
+}
+.contents-nav>.con-left>li:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    border-bottom: none;
+    padding: 2px 20px 0px 19px;
+    gap: 13px;
+    color : gainsboro;
+}
+.contents-nav>.con-left>li:nth-child(2){
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    border: 1px solid gainsboro;
+    border-left: none;
+    border-bottom: none;
+    margin-top: auto;
+}
+.contents-nav>.con-right{
+    display: flex;
+    font-size: 11px;
+    gap: 10px;
+}
+.contents-nav>.con-right>li:nth-child(4)::after{
+    content: "|";
+    margin-left: 10px;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-list>.product{
+    flex-basis: 20vw;
+    margin: 5px;
+    max-width: 300px;
+    min-width: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 30px;
+}
+.product-list>.product>img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid gainsboro;;
+}
+.product-list>.product>.product-spec>li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+/* 페이지 리스트 */
+.main-pagelist{
+    height: 30px;
+}
+.main-pagelist>ul{
+    margin: 40px auto;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
