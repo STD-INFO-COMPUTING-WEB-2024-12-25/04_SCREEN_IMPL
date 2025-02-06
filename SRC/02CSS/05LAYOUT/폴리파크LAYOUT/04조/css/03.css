@@ -116,3 +116,21 @@
   text-decoration: line-through;
   color: #ccc;
 }
+
+.wrapper>main>section>div {
+  margin: 50px 0;
+}
+
+.wrapper>main>section>div>ul.prod-last {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper>main>section>div>ul.prod-last>li {
+  margin: 0 3px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 9px;
+}
