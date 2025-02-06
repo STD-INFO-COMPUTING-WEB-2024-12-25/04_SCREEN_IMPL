@@ -1,5 +1,8 @@
-/*  */
-
+/* */
+body{
+    width: 75vw;
+    margin: 0 auto;
+}
 .line{
     border: 1px solid;
 }
@@ -65,7 +68,7 @@ main>section>.product-menu-container>.product-line{
     position: absolute;
     top: 70px;
     left: 15px;
-    width: 100vw;
+    width: 74vw;
 }
 main>section>.product-menu-container>.product-meun>.product-title{
     border: 1px solid;
