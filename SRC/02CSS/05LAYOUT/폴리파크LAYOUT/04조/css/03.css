@@ -1,0 +1,118 @@
+.page {
+  width: 1260px;
+  margin: 0 auto;
+}
+
+.wrapper>main>section {
+  position: relative;
+
+}
+
+.wrapper>main>section>.prod-cat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 19px;
+}
+
+.wrapper>main>section>.prod-cat>.cat-left>a {
+  margin: 0 0 0 20px;
+  padding: 2px 0 0 0;
+  color: #aaa;
+}
+
+.wrapper>main>section>.prod-cat>.cat-right>a {
+  padding: 0 0 0 18px;
+  color: #555;
+}
+
+.wrapper>main>section>.prod-title {
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 18px;
+}
+
+.wrapper>main>section>.prod-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+}
+
+.wrapper>main>section>.prod-nav>.nav-left {}
+
+.wrapper>main>section>.prod-nav>.nav-left>a {
+  padding: 2px 20px 0 19px;
+}
+
+.wrapper>main>section>.prod-nav>.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.wrapper>main>section>.prod-nav>.nav-right>.right1 {
+  position: relative;
+}
+
+.wrapper>main>section>.prod-nav>.nav-right>.right2::before {
+  display: inline-block;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: #333;
+  margin-right: 5px;
+}
+
+.wrapper>main>section>.prod-nav>.nav-right>.right1>a {
+  line-height: 25px;
+  padding: 0 0 0 18px;
+  color: #555;
+}
+
+.wrapper>main>section>.prod-nav>.nav-right>.right2 {}
+
+.wrapper>main>section>.prod-nav>.nav-right>.right2>button {
+  width: 25px;
+  height: 25px;
+  background-color: #aaa;
+}
+
+.wrapper>main>section>.product-box {
+  /* border: 1px solid; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper>main>section>.product-box>.product {
+  /* border: 1px solid; */
+  width: 300px;
+  /* height: 400px; */
+  margin: 0 15px 15px 0;
+}
+
+.wrapper>main>section>.product-box>.product>.prod-img>img {
+  width: 300px;
+  height: 300px;
+}
+
+.wrapper>main>section>.product-box>.product>.prod-spec {}
+
+.wrapper>main>section>.product-box>.product>.prod-spec>.prod-name {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 13px 0 10px;
+  margin-bottom: 13px;
+}
+
+.wrapper>main>section>.product-box>.product>.prod-spec>.prod-price {}
+
+.wrapper>main>section>.product-box>.product>.prod-spec>.prod-price>li {
+  margin-bottom: 5px;
+}
+
+.wrapper>main>section>.product-box>.product>.prod-spec>.prod-price>li:nth-child(1) {
+  text-decoration: line-through;
+  color: #ccc;
+}
