@@ -129,10 +129,11 @@ body::-webkit-scrollbar{
   
     flex-shrink: 0;
     height : 48px;
-    padding : 0 10px;
+    padding : 0 18px;
     position:relative;
     line-height : 48px;
     text-align : center;
+   
 
 }
 
@@ -150,6 +151,7 @@ body::-webkit-scrollbar{
     left:0;
     display:none;
     background-color: white;
+    z-index:100;
 }
 .wrapper>header>nav>ul.mainmenu>li>ul.submenu>li{
     
@@ -158,6 +160,10 @@ body::-webkit-scrollbar{
 .wrapper>header>nav>ul.mainmenu>li>ul.submenu>li>a{
     display:block;
 }
+
+
+
+
 /* thirdmenu */
 .wrapper>header>nav>ul.mainmenu>li>ul.submenu>li>ul.thirdmenu{
    
@@ -167,9 +173,29 @@ body::-webkit-scrollbar{
     width:100%;
     background-color: white;
     display:none;
+    z-index : 100;
 }
-.wrapper>header>nav>ul.mainmenu>li>ul.submenu>li>ul.thirdmenu>li{}
+.wrapper>header>nav>ul.mainmenu>li>ul.submenu>li>ul.thirdmenu>li{
+
+}
 .wrapper>header>nav>ul.mainmenu>li>ul.submenu>li>ul.thirdmenu>li>a{}
+
+/* 서브메뉴 hover시 이미지 박스 표시*/
+.wrapper>header>nav>ul.mainmenu>li>.image-box{
+    position:absolute;
+    left :0;
+    
+    width : 400px;
+    height :100%;
+   
+    z-index :5;
+    background-color: white;
+    border :1 px solid;
+    display:none;
+}
+.wrapper>header>nav>ul.mainmenu>li:hover>.image-box{
+    display:block;
+}
 
 
 /* hover event */
@@ -184,7 +210,7 @@ body::-webkit-scrollbar{
 /* left-site menu */
 .wrapper>header>nav>ul.mainmenu>li.left-site{
     position:relative;
-    margin-right : 80px;
+    margin-right : 50px;
 }
 .wrapper>header>nav>ul.mainmenu>li.left-site>a{
     height : 100%;
@@ -251,7 +277,7 @@ body::-webkit-scrollbar{
 /* right-site menu */
 .wrapper>header>nav>ul.mainmenu>li.right-site{
     position:relative;
-    margin-left : 80px;
+    margin-left : 50px;
 
 }
 .wrapper>header>nav>ul.mainmenu>li.right-site>a{
@@ -263,9 +289,11 @@ body::-webkit-scrollbar{
 
 .wrapper>header>nav>ul.mainmenu>li.right-site>ul.submenu{
     position:absolute;
-    width :calc(100vw - 480px);
+    /* -480px == 25vw */
+    width :calc(100vw - 25vw);
     min-height : 350px;
-    left:calc(-100vw + 480px + 45px);
+    /* -100vw +480px + 45px */
+    left:calc(-100vw + 25vw + 2.344vw);
    
     border : 1px solid;
     background-color: white;
