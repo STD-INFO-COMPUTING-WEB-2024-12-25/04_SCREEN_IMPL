@@ -250,19 +250,19 @@ footer {
     font-size: 36px;
 }
 
-@media (max-width:1024px) {
+@media (max-width:1259px) {
     .pagew {
         width: 1024px;
     }
 }
 
-@media(max-width:940px) {
+@media(max-width:1010px) {
     .pagew {
         width: 940px;
     }
 }
 
-@media (max-width:360px) {
+@media (max-width:865px) {
     .pagew {
         width: 360px;
     }
