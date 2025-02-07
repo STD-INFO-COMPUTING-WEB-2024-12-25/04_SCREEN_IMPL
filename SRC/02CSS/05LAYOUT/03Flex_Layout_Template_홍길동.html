@@ -172,13 +172,11 @@
         @media (max-width: 1080px) {
             .wrapper>header>nav {
                 /* add */
-                flex-direction: column;
             }
 
             .wrapper>header>nav>.nav-logo {}
 
             .wrapper>header>nav>.nav-menu {
-                flex-direction: column;
             }
 
             .wrapper>header>nav>.nav-menu>li {
@@ -191,6 +189,32 @@
                 flex-shrink: 0;
                 flex-basis: 100%;
               
+            }
+        }
+        @media (max-width: 380px) {
+            .wrapper>header>nav {
+                /* add */
+                flex-direction: column;
+            }
+
+            .wrapper>header>nav>.nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .wrapper>header>nav>.nav-menu {
+                flex-direction: column;
+            }
+
+            .wrapper>header>nav>.nav-menu>li {
+                min-height: 80px;
+                line-height: 80px;
+                font-size: 0.9rem;
+            }
+
+            .wrapper>main>section:nth-child(1)>.card-container>.card{
+                flex-shrink: 0;
+                flex-grow: 0;
+                flex-basis: 100%;
             }
         }
     </style>
