@@ -78,9 +78,40 @@ content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 383px;
+  height: 310px;
   font-size: 12px;
 }
 .mainlayout > .each-rect > .img-description > .product-description {
   color: grey;
+}
+/* 템플릿 */
+@media (max-width: 1080px) {
+  .mainlayout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mainlayout > .each-rect {
+    font-size: 1.2rem;
+  }
+  .top > .top-head > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* 모바일 */
+@media (max-width: 249px) {
+  .mainlayout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainlayout > .each-rect {
+    font-size: 1.4rem;
+  }
+  .top > .top-head > ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-head ul li + li {
+    margin-top: 10px;
+  }
 }
