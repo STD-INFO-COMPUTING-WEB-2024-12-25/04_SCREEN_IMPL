@@ -31,6 +31,7 @@
 
 
     <style>
+        /* 상단 이동 부분 */
         .b {
             width: 100%;
             height: 280px;
@@ -39,15 +40,36 @@
             position: relative;
         }
 
-        .b>.h6_1 {
-            text-align: left;
+        .a1 li{
+            float: left;
+            margin-right: 5px;
+            color: gray;
+            padding: 13px 2px;
+        }
+        .a1 li::after{
+            padding-left: 6px;
+            content: ">";
+        }
+        .a1>li>a{
             color: gray;
         }
-
-        .b>.h6_2 {
+        .b>.a1 li:last-child::after{display: none;}
+        .b>.a2 {
             margin-right: 0;
             opacity: 0.9;
         }
+
+        .a2 li{
+            float: left;
+            margin-right: 5px;
+            color: gray;
+            padding: 13px 2px;
+        }
+        .a2 li::after{
+            padding-left: 6px;
+            content: "|";
+        }
+        .b>.a2 li:last-child::after{display: none;}
 
         .b>.h2_1 {
             display: flex;
@@ -60,20 +82,36 @@
             top: 0;
             bottom: 0;
             margin: auto;
+            gap: 15px;
         }
 
         .b>.h2_1>button {
             font-size: 1rem;
-            background-color: red;
+            background-color: white;
+            border: 3px solid white;
+
         }
-        .d{
+        .b>.h2_1>a{
+            width: 20PX;
+            height: 20PX;
+            font-size: 1rem;
+            background-color: darkred;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 상품 목록 */
+        .d {
             position: relative;
             display: flex;
             justify-content: center;
             height: 2200px;
         }
 
-        .parent{
+        .parent {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(24, 1fr);
@@ -83,12 +121,20 @@
 
 
         .parent>.child {
-            border: 1px solid;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 300px;
+            flex-direction: column;
+        }
+        .parent>.child>img{
             height: 300px;
+            width: 300px;
+        }
+
+        .parent>.child>.manuname{
+            width: 300px;
+            height: 41px;
+            border: 1px solid;
         }
 
         .footer>.c {
@@ -139,14 +185,14 @@
                 </div>
 
             </div>
-            <hr/>
+            <hr />
 
             <div class="logo">
                 <img src="https://polypark.kr/web/upload/appfiles/0zdpAngaKBFnlCcCqpCU4A/19fbef3fed46b5b13bca307bab5e6fc0.png"
                     title="">
             </div>
 
-            <hr/>
+            <hr />
             <nav class="layout-width">
                 <ul class="mainmenu ">
                     <li class="left-site">
@@ -160,7 +206,7 @@
                         </a>
                     </li>
                     <input type="checkbox" id="left-site-chk">
-                    
+
                     <div class="left-site-content ">
                         <ul class="submenu ">
                             <li>
@@ -1070,40 +1116,120 @@
         <main>
             <section>
                 <div class="b">
-                    <h6 class="h6_1">HOME > 고양이 간식 > 파우치</h6>
-                    <h6 class="h6_2">MY | HELP | QUICK</h6>
+                    <ul class="a1">
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">고양이 간식</a></li>
+                        <li><a href="">파우치</a></li>
+                </ul>
+                <ul class="a2">
+                    <li><a href="">MY</a></li>
+                    <li><a href="">HELP</a></li>
+                    <li><a href="">QUICK</a></li>
+                </ul>
                     <h2 class="h2_1">파우치
                         <button>👍</button>
+                        <a>0</a>
                     </h2>
                 </div>
                 <hr>
                 <div class="d">
                     <div class="parent">
 
-                        <div class="child">1</div>
-                        <div class="child">5</div>
-                        <div class="child">9</div>
-                        <div class="child">13</div>
-                        <div class="child">17</div>
-                        <div class="child">21</div>
-                        <div class="child">2</div>
-                        <div class="child">6</div>
-                        <div class="child">10</div>
-                        <div class="child">14</div>
-                        <div class="child">18</div>
-                        <div class="child">22</div>
-                        <div class="child">3</div>
-                        <div class="child">7</div>
-                        <div class="child">11</div>
-                        <div class="child">15</div>
-                        <div class="child">19</div>
-                        <div class="child">13</div>
-                        <div class="child">4</div>
-                        <div class="child">8</div>
-                        <div class="child">12</div>
-                        <div class="child">16</div>
-                        <div class="child">20</div>
-                        <div class="child">24</div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202305/8f26ed5e198c8d3e7af1a847db658d2c.png"
+                                alt="">
+                            <div class="manuname">
+                                <a href="">
+                                    <span>웰빙죽_오리&초록입홍합120g</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202305/a8ffc960641235d46c6c863f716d6194.png"
+                                alt="">
+                                <div class="manuname">
+                                    <a href="">
+                                        <span>웰빙죽_오리&초록입홍합120g</span>
+                                    </a>
+                                </div>
+                            </div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202305/8fed06734d6ffd7ebcbf06163d399f5f.png"
+                                alt="">
+                                <div class="manuname">
+                                    <a href="">
+                                        <span>웰빙죽_오리&초록입홍합120g</span>
+                                    </a>
+                                </div>
+                            </div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202305/ff2236ad4ab0d6dfa58cba51b158ad6e.png"
+                                alt=""><div class="manuname">
+                                    <a href="">
+                                        <span>웰빙죽_오리&초록입홍합120g</span>
+                                    </a>
+                                </div>
+                            </div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202310/c2a12f272ba57bb076b59ad9472ce7e3.png"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202310/7467d2f2f0449074a1967e4af5954cea.png"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202310/8f1140a7ff17f78ef183a75d807d2d1a.png"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202310/34f7c599d3142a6d67c4d6a39fa6cd10.png"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202310/7fb41eecef44a2b39b1e37917ed3014e.png"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202310/0bb2b3d5b16b41ccdd72b51ba09872f0.png"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202501/7db0c3559236a34e5c9157b1c5c5c5b0.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/d669dddf37eefa54b275b00b5e504c9e.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/6395562d02eba6284f6f439233140ba8.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/65c977a3ae27407b4422080ab26d8de2.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/c47a669cad29e57d88f340dc919e358d.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/1e46cb8852ed8dd81aa19668ada4d9c1.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/e2848c969b5eee243ab8944f0f1564e2.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/4c6293d70a3fcae8d50a60d6ae430628.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/ddf2fef4783b87ae76cb8d1f16aef71b.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/c80aaa61ce6e6487abd7c43504173884.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/a0ac09c756f5dc5c5604d5f910cfa204.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/41d9f9d23d8e7bde2ef6bc0952617b10.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/f0cc85f88277d3bd59bdc729c720324b.jpg"
+                                alt=""></div>
+                        <div class="child"><img
+                                src="https://www.polypark.kr/web/product/medium/202412/0577967cc4efa2d815fceba735c90f68.jpg"
+                                alt=""></div>
 
                     </div>
                 </div>
