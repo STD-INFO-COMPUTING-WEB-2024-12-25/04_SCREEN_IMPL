@@ -17,7 +17,7 @@ main {
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    padding: 0 19px;
+    padding: 0;
     font-size: 9px;
 }
 
@@ -55,7 +55,7 @@ main {
 /* 2 메인 네임 */
 .main-name {
     display: flex;
-    height: 125px;
+    height: 200px;
     align-items: center;
     justify-content: center;
     gap: 5px;
@@ -71,7 +71,7 @@ main {
     background-color: white;
 }
 
-.main-name>span:nth-child(3) {
+.main-name>span:nth-child(3) { 
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -108,7 +108,6 @@ main {
     border-top: none;
     padding: 2px 20px 0px 19px;
     gap: 13px;
-    color: gainsboro;
 }
 
 .contents-nav>.con-left>li:nth-child(2) {
@@ -119,18 +118,50 @@ main {
     height: 30px;
     border: 1px solid gainsboro;
     border-left: none;
-    border-bottom: none;
     margin-top: auto;
+    transition: .6s;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+/* compare/상품비교 rotate */
+.contents-nav>.con-left>li:last-child>a{
+    backface-visibility: hidden;
+    display: flex;
+    position: absolute;
+}
+.contents-nav>.con-left>li>a.back{
+    transform: rotateX(180deg);
+}
+.contents-nav>.con-left>li:nth-child(2):hover{
+    transform: rotateX(180deg);
 }
 
 .contents-nav>.con-right {
     display: flex;
     font-size: 11px;
     gap: 10px;
+    transition: .6s;
 }
-
+.contents-nav>.con-right>ul{
+    display: flex;
+    font-size: 11px;
+    gap: 13px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.contents-nav>.con-right>ul>li{
+    transition: 1s;
+}
+/* 햄버거 호버 시 rotate */
+.contents-nav>.con-right>ul>li:hover{
+    transform: rotateX(360deg);
+}
+.contents-nav>.con-right>ul>li>a{
+    color: gray;
+}
 .contents-nav>.con-right>li>a {
-    color: gray
+    color: gray;
 }
 
 .contents-nav>.con-right>li:nth-child(4)::after {
@@ -216,11 +247,8 @@ main {
 
 /* 페이지 리스트 */
 .main-pagelist {
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto;
+    
+    
 }
 
 .main-pagelist>ul {
