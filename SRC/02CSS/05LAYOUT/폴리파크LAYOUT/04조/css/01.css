@@ -250,7 +250,28 @@ footer {
     font-size: 36px;
 }
 
-@media (max-width:1259px) {
+@media (max-width:1024px) {
+    .pagew {
+        width: 1024px;
+    }
+    .product-right {
+        display: none;
+    }
+}
+
+@media(max-width:768px) {
+    .pagew {
+        width: 768px;
+    }
+}
+
+@media (max-width:380px) {
+    .pagew {
+        width: 380px;
+    }
+}
+
+/* @media (max-width:1260px) {
     .pagew {
         width: 1024px;
     }
@@ -258,12 +279,12 @@ footer {
 
 @media(max-width:1010px) {
     .pagew {
-        width: 940px;
+        width: 768px;
     }
 }
 
-@media (max-width:865px) {
+@media (max-width:735px) {
     .pagew {
         width: 360px;
     }
-}
+} */
