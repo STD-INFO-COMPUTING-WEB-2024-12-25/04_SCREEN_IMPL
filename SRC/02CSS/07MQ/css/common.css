@@ -1,5 +1,9 @@
 :root{
+<<<<<<< HEAD
     font-size: 32px;
+=======
+    font-size:8px;
+>>>>>>> df84a893d12b355222bf4601ce970eee2085c6a0
 }
 div{
     transition: .5s;

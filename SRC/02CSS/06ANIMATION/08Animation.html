@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,6 +43,62 @@
         }
         to {
           top: 0;
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            
+            
+            
+            width:400px;
+            margin:100px auto;
+            position:relative;
+          
+        }
+        .item{
+            width:400px;height:40px;background-color: orange;
+            color:white;
+            text-align:center;
+            line-height:40px;
+            border : 1px solid black;     
+            position:absolute;   
+        }
+        .item:nth-child(1){
+            animation-name:moving1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            
+        }
+        .item:nth-child(2){
+            animation-name:moving2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            top:40px;
+        }
+        .item:nth-child(3){
+            animation-name:moving3;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            top:80px;
+        }
+        @keyframes moving1{
+            from{margin-top:100vh}
+            to{margin-top:0vh}
+        }
+        @keyframes moving2{
+            from{margin-left:100vw;}
+            to{margin-left:0vw;}
+        }
+        @keyframes moving3{
+            from{margin-left:100vw;margin-top:100vh;}
+            to{margin-left:0vw;margin-top:0vh;}
+>>>>>>> df84a893d12b355222bf4601ce970eee2085c6a0
         }
       }
       @keyframes moving2 {
@@ -61,6 +118,7 @@
         }
       }
     </style>
+<<<<<<< HEAD
   </head>
   <body>
     <div>HELLOWORLD1</div>
@@ -68,3 +126,14 @@
     <div>HELLOWORLD3</div>
   </body>
 </html>
+=======
+</head>
+<body>
+    <div class="container">
+        <div class="item">HELLOWORLD</div>
+        <div class="item">HELLOWORLD</div>
+        <div class="item">HELLOWORLD</div>
+    </div>
+</body>
+</html>
+>>>>>>> df84a893d12b355222bf4601ce970eee2085c6a0
