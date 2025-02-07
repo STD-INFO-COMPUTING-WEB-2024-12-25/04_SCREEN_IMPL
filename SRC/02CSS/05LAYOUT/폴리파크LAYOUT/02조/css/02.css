@@ -71,21 +71,30 @@ main>section>.product-menu-container>.product-line{
     width: 74vw;
 }
 main>section>.product-menu-container>.product-meun>.product-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid;
     padding: 15px;
+    width: 232px;
+    gap: 5px;
 }
 main>section>.product-menu-container>.product-meun>.product-title>span{
     color: rgb(145, 43, 69);
     font-size: 24px;
     font-weight: bold;
 }
+main>section>.product-menu-container>.product-meun>.product-title>p{
+    display: block;
+    width: 240px;
+}
 main>section>.product-menu-container>.product-meun>.compare{
     position: absolute;
     border: 1px solid;
     padding: 15px;
-    max-width: 120px;
+    width: 120px;
     top: 19px;
-    left: 245px;
+    left: 246px;
     background-color: white;
 }
 main>section>.product-menu-container>.product-meun>.product-quick>a{
@@ -103,7 +112,7 @@ main>section>.product-container{
 }
 main>section>.product-container>.product-content{
     flex-grow: 1;
-    max-width: 300px;
+    max-width: 15vw;
     flex-basis: 200px;
 }
 main>section>.product-container>.product-content>span{
@@ -120,7 +129,8 @@ main>section>.product-container>.product-content>a{
     display: block;
 }
 main>section>.product-container>.product-content>a>img{
-    max-height: 300px;
+    max-height: 15vw;
+    min-width: 200px;
 }
 
 main>section>.page-list{
@@ -132,8 +142,43 @@ main>section>.page-list{
     padding: 80px;
 }
 
-@media(max-width:1280px){
+@media all and (max-width:1280px){
     main>section>.product-menu-container>.product-meun>.product-quick{
         display: none;
     }
+    main>section>.product-container>.product-content>a>img{
+        max-height: 21vw;
+        min-width: 200px;
+        object-fit: contain;
+    }
+    main>section>.product-container>.product-content{
+        flex-grow: 1;
+        max-width: 21vw;
+        flex-basis: 200px;
+    }
 }
+@media all and (max-width:1080px){
+    main>section>.product-container>.product-content>a>img{
+        max-width: 33vw;
+        min-width: 140px;
+    }
+    main>section>.product-container>.product-content{
+        flex-grow: 1;
+        max-width: 33vw;
+        flex-basis: 140px;
+    }
+}
+@media all and (max-width:480px){
+    main>section>.product-container>.product-content>a>img{
+        max-height: 80vw;
+        max-width: none;
+        min-width: 140px;
+    }
+    main>section>.product-container>.product-content{
+        flex-grow: 1;
+        max-width: none;
+        max-height: 100vw;
+        flex-basis: 140px;
+    }
+}
+
