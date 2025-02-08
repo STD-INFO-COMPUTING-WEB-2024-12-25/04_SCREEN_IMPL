@@ -1,0 +1,395 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  
+  
+  
+  .layout-1280{
+      max-width: 1280px;
+      margin: 0 auto;
+  }
+  a{display: block;}
+  a:hover{
+      color: #000 !important;
+  }
+  p{margin-bottom: 7px;}
+  /* 화면 이동 네비 */
+  .catvs-top-submenu{
+      padding: 15px;
+  
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      font-size: 0.8rem;
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav{
+      display: flex;
+      align-items: center;
+  
+      gap: 10px;
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav>li{
+      display: flex;
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav>li>a{
+      color: rgb(150, 150, 150);
+      font-weight: 300;
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav:first-child>li::after{
+      margin-left: 10px;
+      content: ">";
+      color: rgb(150, 150, 150);
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav:last-child>li::after{
+      margin-left: 10px;
+      content: "|";
+      color: rgb(150, 150, 150);
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav>li:last-child::after{
+      content: "";
+  }
+  .catvs-top-submenu>ul.catvs-top-sub-nav.li>a{
+      display: block;
+  }
+  
+  /* 브랜드명, 좋아요, 좋아요 수 */
+  .catvs-brand{
+      margin: 90px 0;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .catvs-brand>div:first-child>span{
+      font-weight: 300;
+      color: #000;
+  }
+  .catvs-brand>div:first-child{
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-right: 5px;
+  }
+  .catvs-brand>div>a{
+      display: block;
+      text-align: center;
+  
+      width: 20px;
+      height: 20px;
+  }
+  .material-symbols-outlined{
+      display: flex;
+      justify-content: center;
+      line-height: 20px;
+      font-size: 15px;
+  }
+  
+  .catvs-brand>div:last-child{
+      display: block;
+      text-align: center;
+      line-height: 20px;
+      margin-left: 5px;
+  
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: rgb(236, 236, 236);
+  }
+  
+  /* 상품 옵션란 */
+  .catvs-brand-submenu{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+  
+      border-bottom: 1px solid rgb(231, 231, 231);
+  }
+  
+  .catvs-brand-submenu>ul:first-child{
+      display: flex;
+      justify-content: left;
+      align-items: end;
+  }
+  .catvs-brand-submenu>ul:first-child>li{
+      border: 1px solid rgb(231, 231, 231);
+      border-bottom: #fff;
+      font-size: 0.9rem;
+  }
+  
+  .catvs-brand-submenu>ul:first-child>li:first-child{
+      padding: 10px 20px;
+  }
+  .catvs-brand-submenu>ul:first-child>li:last-child{
+      border-left: #fff;
+  }
+  .catvs-move{
+      width: 80px;
+      height: 25px;
+      position: relative;
+      overflow: hidden;
+  }
+  .catvs-move>li{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .5s;
+  }
+  .catvs-move>li:first-child{
+      top:-100%;
+  }
+  .catvs-brand-submenu>ul:first-child>li:last-child>a:first-child{
+      display: none;
+  }
+  .catvs-brand-submenu>ul:first-child>li>a>ul{
+      display: flex;
+      align-items: end;
+      gap: 10px;
+  }
+  .bold{
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: brown;
+  }
+  .catvs-brand-submenu>ul:last-child{
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      padding-bottom: 10px;
+  }
+  
+  .catvs-brand-submenu>ul:last-child{
+      font-size: 0.8rem;
+      gap: 15px;
+  }
+  .catvs-brand-submenu>ul:last-child>li:nth-child(4){
+      display: flex;
+      gap: 15px;
+  }
+  .catvs-brand-submenu>ul:last-child>li>a{
+      color: rgb(150, 150, 150);
+      font-weight: 300;
+  }
+  .catvs-brand-submenu>ul:last-child>li:nth-child(4)::after{
+      content: "|";
+  }
+  .catvs-brand-submenu>ul>li>a{
+      display: block;
+  }
+  .catvs-item-layoutslec{
+      width: 20px;
+      height: 15px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      position: relative;
+  
+      overflow: hidden;
+  }
+  .catvs-item-layoutslec>a{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transition: .5s;
+  }
+  .catvs-item-layoutslec>a:last-child{
+      bottom: -100%;
+  }
+  .catvs-item-layoutslec:hover>a:first-child{
+      transform: translateY(-100%);
+  }
+  .catvs-item-layoutslec:hover>a:last-child{
+      transform: translateY(-100%);
+  }
+  
+  
+  
+  /* 상품 아이템 배치 */
+  .catvs-item{
+      margin-top: 40px;
+  
+      display: flex;
+      justify-content: left;
+      align-items: start;
+      flex-wrap: wrap;
+  
+      gap: 10px;
+  
+  }
+  
+  .catvs-item>div{
+      flex-grow: 1;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: start;
+  
+  }
+  
+  .catvs-pic>a>img{
+      max-width: 20vw;
+      min-width: 230px;
+      transition: .5s;
+  }
+  
+  .catvs-pic{
+      position: relative;
+      overflow: hidden;
+  
+  }
+  .check{
+      position:absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      width: 15px;
+      height: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      display: none;
+  }
+  .order{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: rgb(27, 27, 27);
+      color: #fff;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      z-index: 100;
+  }
+  .order>span{
+      font-weight: 100;
+      font-size: 1rem;
+  }
+  .check>a>span{
+      font-size: 10px;
+      color: rgb(150, 150, 150);
+  }
+  .catvs-pic-info{
+      position: absolute;
+      right: 0;
+      bottom: 20px;
+      z-index: 999;
+  
+      display: flex;
+      justify-content: right;
+      gap: 13px;
+  
+      display: none;
+  
+  }
+  .catvs-pic-info>div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .catvs-pic-info>div>a>span{
+      font-size: 12px;
+      color: rgb(37, 37, 37);
+  }
+  
+  
+  
+  .catvs-item-bold{
+      font-weight: bold;
+  }
+  .catvs-name{
+      font-size: 1rem;
+      padding: 15px 0;
+      margin-bottom: 15px;
+      width: 100%;
+  
+      border-bottom: 1px solid rgb(204, 204, 204);
+  }
+  .catvs-item p{
+      font-size: 1rem;
+  }
+  
+  
+  .catvs-brand-nav{
+      margin: 100px 0 30px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+  
+      gap: 20px;
+  }
+  
+  /* hover */
+  .catvs-brand-submenu>ul:first-child>li:last-child:hover{
+      background-color: rgb(219, 219, 219);
+  }
+  .catvs-pic img:hover{
+      transform: scale(1.1);
+  }
+  
+  .catvs-move:hover>li{
+      transform: translateY(100%);
+  
+      
+  }
+  .catvs-move:hover>li:last-child{
+      transform: translateY(100%) scale(.8);
+  }
+  
+  
+  
+  .catvs-pic:hover>.check{
+      display: flex;
+  }
+  .check:hover{
+      border: 1px solid rgb(150, 150, 150);
+  }
+  .catvs-pic:hover>.catvs-pic-info{
+      display: flex;
+  }
+  
+  @media(max-width:1080px){
+      .catvs-brand-submenu>ul:last-child{
+          display: none;
+      }
+      .catvs-pic:hover>.catvs-pic-info{
+          display: none;
+      }
+  }
+  
+  @media(max-width:400px){
+      .catvs-top-sub-nav{
+          flex-direction: column;
+      }
+      .catvs-top-submenu>ul.catvs-top-sub-nav:first-child>li::after{
+          content: " ";
+      }
+      .catvs-top-submenu>ul.catvs-top-sub-nav:first-child>li::before{
+          content: ">";
+          margin-right: 5px;
+      }
+      .catvs-top-submenu>ul.catvs-top-sub-nav:first-child>li:first-child:before{
+          content: " ";
+          margin-right: 5px;
+      }
+      .catvs-top-submenu>ul.catvs-top-sub-nav:last-child>li::after{
+          content: " ";
+      }
+      .catvs-pic:hover>.catvs-pic-info{
+          display: none;
+      }
+  
+  }
