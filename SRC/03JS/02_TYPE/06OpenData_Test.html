@@ -87,17 +87,21 @@
             {"OID":"1111-1111",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"돼지국밥","PRC":9000,"AMT":5},
             {"OID":"1111-1112",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"수육","PRC":28000,"AMT":2},
             {"OID":"1111-1113",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"순대한접시","PRC":12000,"AMT":2},
-            {"OID":"1111-1114",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"섞어국밥","PRC":9000,"AMT":4},
-        ]
+            {"OID":"1111-1114",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"섞어국밥","PRC":9000,"AMT":4}
+        ];
 
-        // 1 주문 아이템 리스트의 아이템당 지불금액을 구하세요  
+        // 1 주문 아이템 리스트의 아이템당 지불금액을 구하세요
         // ex {OID : "1111-1111" ,PRICE_AMOUNT:45000}
         // ex {OID : "1111-1112" ,PRICE_AMOUNT:56000}
         // ...
-
+        let a = order_list.map(item=>{
+            return {OID:item.OID,PRICE_AMOUNT:(item.PRC*item.AMT)}
+        });
+        console.log(a);
         // 2 총 지불 금액을 구하세요 -
         // ex {TOTALPRICE :PRICE*AMOUNT의 합}
-
+        let b = {TOTALPRICE:a.reduce((sum,item)=>{return sum+item.PRICE_AMOUNT},0)};
+        console.log(b);
 
 
     </script>
