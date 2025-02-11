@@ -45,7 +45,7 @@
         //------------------------------------
         // 중구맛집_한식_상호명메뉴주소 에서 MNU(메뉴) 의 값을 메뉴명:가격(숫자)으로 분리
         //------------------------------------
-        const RenaledMenu = 중구맛집_한식_상호명메뉴주소.map((item)=>{
+        const RenewaledMenu = 중구맛집_한식_상호명메뉴주소.map((item)=>{
             // <br /> 제거
             let replcedBrMenu =   item.MNU.replaceAll('<br />',"\n")
             // console.log("replcedBrMenu",replcedBrMenu);
@@ -63,7 +63,7 @@
                     // 가격에 '원'제거, ','제거
                     let removed_arr =  splited_space.map((menu_2)=>{
                         const renewalItem = menu_2.trim().replace(/(\d{1,3})(?:,\d{3})*(?:원)?/g ,(match,str)=>{
-                            console.log(match,str);
+                            // console.log(match,str);
                             const num = match.replace(',','').replace('원','');
                             // console.log('num',num);
                             return num;
@@ -75,7 +75,7 @@
             // console.log("renewaled_menu",renewaled_menu);
             return {"BZ_NM":item.BZ_NM,"GNG_CS":item.GNG_CS ,"MNU":renewaled_menu};
         })
-        console.log("RenaledMenu",RenaledMenu);
+        console.log("RenewaledMenu",RenewaledMenu);
 
 
     </script>
