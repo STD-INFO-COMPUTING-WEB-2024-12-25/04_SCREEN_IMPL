@@ -65,7 +65,7 @@
                 
                 //아래코드완성 - 속성에 저장되어 있는 값을 '평균'을 확인 버튼을 눌렀을때  .avg-block 안의 값으로 넣어줍니다
                 const sumBlock = document.querySelector('.avg-block');
-                this.평균 = parseInt(this.국어) + parseInt(this.영어) + parseInt(this.수학)/3;
+                this.평균 = (parseInt(this.국어) + parseInt(this.영어) + parseInt(this.수학))/3;
                 sumBlock.innerHTML = this.평균;
             },
         }
