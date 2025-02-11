@@ -63,7 +63,7 @@
                     // 가격에 '원'제거, ','제거
                     let removed_arr =  splited_space.map((menu_2)=>{
                         const renewalItem = menu_2.trim().replace(/(\d{1,3})(?:,\d{3})*(?:원)?/g ,(match,str)=>{
-                            // console.log(match,str);
+                            // console.log(match,str);    \d --> 숫자    ?: --->     * --->반복적용할 시        
                             const num = match.replace(',','').replace('원','');
                             // console.log('num',num);
                             return num;
@@ -76,6 +76,13 @@
             return {"BZ_NM":item.BZ_NM,"GNG_CS":item.GNG_CS ,"MNU":renewaled_menu};
         })
         console.log("RenewaledMenu",RenewaledMenu);
+
+
+        //주문 리스트
+        let order_list = [];
+        const order_list=[
+            {"OID":"주문번호",'BZ_NM':'상호명',"GNG_CS":'주소',"MNU":"메뉴명","PRICE" :"가격","AMT":"수량"}
+        ]
 
 
     </script>
