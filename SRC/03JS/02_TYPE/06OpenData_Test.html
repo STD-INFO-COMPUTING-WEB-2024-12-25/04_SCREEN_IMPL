@@ -68,7 +68,7 @@
                             // console.log('num',num);
                             return num;
                         });
-                        return renewalItem.match(/\d/) ? {"PRICE": Number(renewalItem) } : renewalItem; 
+                        return renewalItem.match(/\d/) ?  Number(renewalItem)  : renewalItem; 
                     })
                     return removed_arr;
                 })
@@ -76,6 +76,28 @@
             return {"BZ_NM":item.BZ_NM,"GNG_CS":item.GNG_CS ,"MNU":renewaled_menu};
         })
         console.log("RenewaledMenu",RenewaledMenu);
+
+
+        //RenewaledMenu에서 주문 리스트(특정 상호명을 선택해서 메뉴추가작업의 결과값을 넣어주시면 됩니다)
+        //장모님 국밥 메뉴 주문 리스트
+        let order_list  = [];
+        
+        order_list = [
+        //    {"OID":"주문번호",'BZ_NM':'상호명',"GNG_CS":'주소',"MNU":"메뉴명","PRC":"가격","AMT":"수량"} //수량은 임의로
+            {"OID":"1111-1111",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"돼지국밥","PRC":9000,"AMT":5},
+            {"OID":"1111-1112",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"수육","PRC":28000,"AMT":2},
+            {"OID":"1111-1113",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"순대한접시","PRC":12000,"AMT":2},
+            {"OID":"1111-1114",'BZ_NM':"장모님국밥","GNG_CS":"대구광역시 중구 삼덕동2가 149-6", "MNU":"섞어국밥","PRC":9000,"AMT":4},
+        ]
+
+        // 1 주문 아이템 리스트의 아이템당 지불금액을 구하세요  
+        // ex {OID : "1111-1111" ,PRICE_AMOUNT:45000}
+        // ex {OID : "1111-1112" ,PRICE_AMOUNT:56000}
+        // ...
+
+        // 2 총 지불 금액을 구하세요 -
+        // ex {TOTALPRICE :PRICE*AMOUNT의 합}
+
 
 
     </script>
