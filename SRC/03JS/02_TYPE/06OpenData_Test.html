@@ -94,6 +94,8 @@
         // ex {OID : "1111-1111" ,PRICE_AMOUNT:45000}
         // ex {OID : "1111-1112" ,PRICE_AMOUNT:56000}
         // ...
+        const price=item.filter((item)=>{return item.order_list===장모님국밥}).map((item)=> {item={...item, 'PRice_AMOUNT' : PRC*AMT}})
+        console.log(price);
 
         // 2 총 지불 금액을 구하세요 -
         // ex {TOTALPRICE :PRICE*AMOUNT의 합}
