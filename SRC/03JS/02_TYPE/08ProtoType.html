@@ -35,7 +35,6 @@
         Object.seal(obj);       //새속성 추가불가
 
         console.log(Object.prototype);
-        
 
         //----------------------------------------
         //Object.prototype  : 객체가 상속을 구현하는데 사용되는 메커니즘,Object객체 내에 구성
@@ -52,6 +51,28 @@
         //     toLocaleString(): 객체를 지역화된 문자열로 변환하여 반환합니다.
         //     propertyIsEnumerable(): 특정 속성이 열거 가능한 속성인지 여부를 확인합니다.
         //     constructor: 객체를 생성한 생성자 함수를 참조합니다.
+
+
+        // 프로토타입 함수 정의
+        function Person(name){
+            this.name=name;
+        }
+
+        // Person 프로토타입으로 객체 생성
+        const person1 = new Person('홍길동');
+        console.log(person1);
+        person1.toString();
+        
+        // Person 프로토타입에 기능 추가
+        Person.prototype.hello=function(){
+            console.log(`안녕하세요! 저는 ${this.name} 입니다`);
+        };
+
+        //
+        const person2 = new Person('남길동');
+        console.log(person2);
+        person2.hello();
+
     </script>
 
 </body>
