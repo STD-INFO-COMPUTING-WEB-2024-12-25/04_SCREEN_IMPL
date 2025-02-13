@@ -41,14 +41,17 @@
         // clousureFunc();
 
 
+        // 02
 
         // 전역 스코프
         var x = 'global x'
+        var n1 = 10;
+        console.log("window",window.x);
 
         // outer 함수 지역 스코프
         function outer() {
             var x = 'outer x'
-            var y = 'outer y'
+            var y = 0;
 
             // inner 함수 지역 스코프
             function inner() {
@@ -58,15 +61,24 @@
                 if (x) {
                     const x = 'if block scope'
                     console.log(x) // if block scope
-                    console.log(y) // outer y
-                    console.log(z) // Uncaught ReferenceError: z is not defined
+                    y++;
+                    console.log('y',y) // outer y
+                    n1++;
+                    console.log('n1',n1) // window n1
+                    // console.log(z) // Uncaught ReferenceError: z is not defined
                 }
+                console.dir(inner);
             }
 
-            inner()
+           return inner;
         }
 
-        outer()
+        const clousureFunc2=outer()
+        clousureFunc2();
+        clousureFunc2();
+        clousureFunc2();
+        clousureFunc2();
+        clousureFunc2();
     </script>
 </body>
 
