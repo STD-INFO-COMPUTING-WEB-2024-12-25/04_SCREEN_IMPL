@@ -34,7 +34,25 @@
             min-width : 120px;
             max-width : 150px;
             width : 100%;
+            height : 45px;
+            line-height: 45px;
         }
+        nav>.main-menu>li>a{
+            display:block;
+        }
+        nav>.main-menu>li>.sub-menu{
+            list-style: none;
+            margin: 0; padding : 0;
+            background-color: royalblue;
+            display:none;
+        }
+        nav>.main-menu>li>.sub-menu>li{}
+        nav>.main-menu>li>.sub-menu>li>a{}
+
+        nav>.main-menu>li:hover>.sub-menu{
+            display:block;
+        }
+
     </style>
 </head>
 
@@ -159,7 +177,7 @@
                     const submenuArr = subname.split(' ');
                     // ul 생성 , li 생성 , a 생성 - 연결
                     const ulEl = document.createElement('ul');
-                    ulEl.classList.add('submenu');
+                    ulEl.classList.add('sub-menu');
                     submenuArr.forEach(str=>{
                         const newLi = document.createElement('li');
                         const newA = document.createElement('a');
