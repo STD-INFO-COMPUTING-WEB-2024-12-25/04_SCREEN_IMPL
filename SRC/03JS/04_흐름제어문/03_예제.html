@@ -61,12 +61,13 @@
                 </select>
                 <a href="javascript:void(0)" class="view-mode-btn">모드 변환</a>
             </form>
-<!-- 
-            <form name="navForm3" onsubmit="return false">
-                <input type="text" name="subname">
-                <a href="javascript:void(0)" class="nav-btn">NAV-서브메뉴만들기</a>
+
+            <form name="submenuForm" onsubmit="return false">
+                <input type="text" name="mainname" placeholder="메인 메뉴명을 입력하세요">
+                <input type="text" name="subname" placeholder="서브 메뉴명을 입력하세요(띄어쓰기)">
+                <a href="javascript:void(0)" class="sub-menu-btn">NAV-서브메뉴만들기</a>
             </form>
-             -->
+            
         </footer>
     </div>
 
@@ -96,10 +97,11 @@
             // 배열함수를 이용(forEach)해서 자식 노드(li) 추가
             menuArr.forEach((str)=>{
                 const liEl = document.createElement('li');
+                // 
                 const aEl = document.createElement('a');
                 aEl.setAttribute('href','javascript:void(0)');
                 aEl.innerHTML = str;
-
+                
                 // li - a(자식) 추가
                 liEl.appendChild(aEl);
                 
@@ -132,8 +134,51 @@
 
         });
 
+        // 서브메뉴 만들기
+        const subMenuBtnEl = document.querySelector('.sub-menu-btn');
+        subMenuBtnEl.addEventListener('click',()=>{
+            const form = document.submenuForm;
+            const mainname = form.mainname.value;
+            const subname = form.subname.value;
+            console.log(mainname,subname);
+
+            // 메인메뉴 찾기
+            const mainMenuLiEls = document.querySelectorAll('.main-menu>li>a');
+            console.log(mainMenuLiEls);
+
+            // const findAEl =  mainMenuLiEls.find((el)=>el.textContent.trim() === mainname );
+            // console.log("findAEl",findAEl);
+            
+            mainMenuLiEls.forEach((el)=>{
+                if(el.textContent.trim() === mainname){
+                    console.log('find!!',el);
+                    const liEl =  el.parentNode;
+                    console.log(liEl);
+                    
+                    // 서브메뉴 만들기
+                    const submenuArr = subname.split(' ');
+                    // ul 생성 , li 생성 , a 생성 - 연결
+                    const ulEl = document.createElement('ul');
+                    ulEl.classList.add('submenu');
+                    submenuArr.forEach(str=>{
+                        const newLi = document.createElement('li');
+                        const newA = document.createElement('a');
+                        newA.setAttribute('href','javascript:void(0)');
+                        newA.innerHTML=str;
+
+                        newLi.appendChild(newA);
+                        ulEl.appendChild(newLi);
+                    })
+
+                    liEl.appendChild(ulEl);
 
 
+                }
+            })
+
+            
+
+        });
 
 
     </script>
