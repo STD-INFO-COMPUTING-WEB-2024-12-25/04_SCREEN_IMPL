@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b8de10a (폴리파크 수정)
 /* */
 body{
     width: 75vw;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 =======
 /*  */
 
 >>>>>>> 5380904 (폴리파크 2조)
+=======
+>>>>>>> b8de10a (폴리파크 수정)
 .line{
     border: 1px solid;
 }
@@ -77,8 +83,12 @@ main>section>.product-menu-container>.product-line{
     width: 74vw;
 =======
     left: 15px;
+<<<<<<< HEAD
     width: 100vw;
 >>>>>>> 5380904 (폴리파크 2조)
+=======
+    width: 74vw;
+>>>>>>> b8de10a (폴리파크 수정)
 }
 main>section>.product-menu-container>.product-meun>.product-title{
     border: 1px solid;
