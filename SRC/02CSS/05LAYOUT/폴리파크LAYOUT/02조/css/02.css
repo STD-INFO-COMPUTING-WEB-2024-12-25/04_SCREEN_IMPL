@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 /* */
 body{
     width: 75vw;
     margin: 0 auto;
 }
+=======
+/*  */
+
+>>>>>>> 5380904 (폴리파크 2조)
 .line{
     border: 1px solid;
 }
@@ -67,8 +72,13 @@ main>section>.product-menu-container>.product-meun{
 main>section>.product-menu-container>.product-line{
     position: absolute;
     top: 70px;
+<<<<<<< HEAD
     left: 10px;
     width: 74vw;
+=======
+    left: 15px;
+    width: 100vw;
+>>>>>>> 5380904 (폴리파크 2조)
 }
 main>section>.product-menu-container>.product-meun>.product-title{
     border: 1px solid;
