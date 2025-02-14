@@ -68,14 +68,21 @@
         <form name="form1" onsubmit="return false">
             <div class="item">
                 <label>상호명 선택: </label>
-                <select class="select-restorant">
+                <select class="select-restorant" name="selectRestorant">
+                    <option value="" selected>식당을 선택하세요</option>
                     <!-- <option value=""></option> -->
                 </select>
             </div>
             <div>
-                <button>검색</button>
+                <a href="javascript:void(0)" class="show-menu-btn">검색</a>
             </div>
         </form>
+        <!-- 상단 폼에서 선택한 식당의 메뉴를 표시 -->
+        <div class="restorant-menu-block">
+                [문제]선택한 레스토랑에 대한 메뉴가 표시되어야 합니다!
+        </div>
+
+
     </div>
 
     <div class="show-block order-input-block">
@@ -156,14 +163,30 @@
         //--------------------
         const selectRestorant = document.querySelector('.select-restorant'); // SelectNode탐색
         RenewaledMenu.forEach((item) => {
-            console.log(item);
+            // console.log(item);
             const opNode = document.createElement("option"); // 새노드생성
             opNode.innerHTML = item.BZ_NM;       //option 내의 content에 내용저장(식당명)
             selectRestorant.appendChild(opNode)   //selectNode의 자식으로 붙이기
 
         });
 
-        // 
+        // step-1-1
+        const showMenuBtn = document.querySelector('.show-menu-btn');
+        showMenuBtn.addEventListener('click',()=>{
+
+            const form = document.form1;
+            const selectedRestorant = form.selectRestorant.value;
+            console.log(selectedRestorant); 
+
+            const restorantEl= RenewaledMenu.find((item)=>{return item.BZ_NM===selectedRestorant})
+
+            console.log('find!!',restorantEl);
+
+            // 식당정보 표시하기
+            const restorantMenuBlockEl = document.querySelector('.restorant-menu-block');
+            restorantMenuBlockEl.innerHTML=restorantEl.MNU;
+
+        });
 
 
         // 
