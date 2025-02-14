@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b8de10a (폴리파크 수정)
+=======
+>>>>>>> cb7e168a7845c6538fd8bf4008dcd91f2252d6d6
 /* */
 body{
     width: 75vw;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 /*  */
@@ -14,6 +18,8 @@ body{
 >>>>>>> 5380904 (폴리파크 2조)
 =======
 >>>>>>> b8de10a (폴리파크 수정)
+=======
+>>>>>>> cb7e168a7845c6538fd8bf4008dcd91f2252d6d6
 .line{
     border: 1px solid;
 }
@@ -79,6 +85,7 @@ main>section>.product-menu-container>.product-line{
     position: absolute;
     top: 70px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     left: 10px;
     width: 74vw;
 =======
@@ -89,6 +96,10 @@ main>section>.product-menu-container>.product-line{
 =======
     width: 74vw;
 >>>>>>> b8de10a (폴리파크 수정)
+=======
+    left: 10px;
+    width: 74vw;
+>>>>>>> cb7e168a7845c6538fd8bf4008dcd91f2252d6d6
 }
 main>section>.product-menu-container>.product-meun>.product-title{
     display: flex;
