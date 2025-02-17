@@ -47,6 +47,16 @@
             border : 1px solid;
             height:100%;
             width:calc(100% - 200px);
+            position:relative;
+            left:0;
+            top:0;
+        }
+        .wrapper>main>section>article .item{
+            width:200px;
+            height:200px;
+            border : 1px solid;
+            background-color: bisque;
+            position:absolute;
         }
     </style>
 </head>
@@ -59,18 +69,38 @@
                 <aside>
 
                     <ul class="items">
-                        <li><a href="">ITEM</a></li>
-                        <li><a href="">ITEM</a></li>
-                        <li><a href="">ITEM</a></li>
-                        <li><a href="">ITEM</a></li>
+                        <li><a href="" draggable="true">ITEM</a></li>
+                        <li><a href="" draggable="true">ITEM</a></li>
+                        <li><a href="" draggable="true">ITEM</a></li>
+                        <li><a href="" draggable="true">ITEM</a></li>
                     </ul>
 
                 </aside>
-                <article></article>
+                <article class="board">
+
+                </article>
             </section>
             <footer></footer>
         </main>
     </div>
 
+    <script>
+        const boardEl = document.querySelector('.board'); 
+        boardEl.addEventListener('dragover',(e)=>{
+            e.preventDefault();
+        });
+        boardEl.addEventListener('drop',(e)=>{
+            e.preventDefault();
+            console.log('dropevent',e);
+            console.log('ClientXY',e.clientX,e.clientY);
+            console.log('OffsetXY',e.offsetX,e.offsetY);
+
+            const newDivEl = document.createElement('div');
+            newDivEl.classList.add('item');
+            newDivEl.setAttribute('style',`left:${e.offsetX}px;top:${e.offsetY}px;`)
+            boardEl.appendChild(newDivEl);
+        });
+
+    </script>
 </body>
 </html>
