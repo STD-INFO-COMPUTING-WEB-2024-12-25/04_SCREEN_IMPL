@@ -106,8 +106,14 @@
     </div>
 
     <script>
+        //상태정보 저장
+        let isMoving = false;
+        let offsetX = 0;
+        let offsetY = 0;
+        let targetNode = false;
 
 
+        // 1 아이템 드래그 & 드랍
         const liEls = document.querySelectorAll('.items li');
         let dragedNode = null;
         liEls.forEach((liEl)=>{
@@ -133,6 +139,9 @@
             
             const newDivEl = document.createElement('div');
             
+            // 2 요소 옮기기 이벤트 추가
+            newDivEl.addEventListener('mousedown',movingHandler);
+            
             newDivEl.classList.add('item');
             newDivEl.setAttribute('style',`left:${e.offsetX}px;top:${e.offsetY}px;`)
             const itemAllClassArr=Object.values(dragedNode.classList);
@@ -144,6 +153,45 @@
             boardEl.appendChild(newDivEl);
         });
 
+
+
+        // 우클릭 시 이동 처리
+        boardEl.addEventListener('contextmenu',(e)=>{
+            e.preventDefault();
+        });
+
+
+        const movingHandler = (e)=>{
+            console.log(e.button);
+            if(e.button==2) //우 클릭시
+            {
+                if(!isMoving){
+                    //옮기는 시작 위치에서 우클릭
+                    isMoving = true;
+                    e.target.style.opacity=".6";
+                    
+                    targetNode=e.target;
+                    //마우스좌표 저장 이벤트 추가
+                    boardEl.addEventListener('mousemove',mouseXYsaveHandler);
+                }
+                else{
+                    //옮기는 끝 위치에서 우클릭
+                    isMoving = false;
+                    e.target.style.opacity="1";
+                    
+                    targetNode=null;
+                    //마우스좌표 저장 이벤트 제거
+                    boardEl.removeEventListener('mousemove',mouseXYsaveHandler);
+                }
+            }
+        };
+
+        //마우스 이동 처리 핸들러
+        const mouseXYsaveHandler = (e)=>{
+            // console.log('mouseXYsaveHandler',e);
+            targetNode.style.left=`${e.clientX - 200 - 20}px`;
+            targetNode.style.top=`${e.clientY - 10}px`;
+        }
     </script>
 </body>
 </html>
