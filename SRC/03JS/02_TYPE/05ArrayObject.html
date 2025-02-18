@@ -160,46 +160,42 @@
             { id: 10, name: "수지", age: 26, department: "디자인", salary: 4800, years: 3 }
         ];
 
-        //연봉이(salary) 6000이상이면서 근속연수(years)가 7년이상인(item.salary>=6000 && item.years>=7) 직원만 필터링해서 배열로 저장 확인
-        const ex_1 = employees.filter(item=>item.salary>=6000 && item.years>=7);
-        console.log("--------------------------");
-        console.log(ex_1);
-        console.log("--------------------------");
-
+        //연봉이(salary) 6000이상이면서 근속연수(years)가 7년이상인 직원만 필터링해서 배열로 저장 확인
+        let pb1 = employees.filter((item) => item.salary >= 6000 && item.years >= 7);
+        console.log("문제 1 :", pb1);
         //모든 직원의 연봉(salary) 기준으로 내림차순 정렬한 배열 새로 만들기
-        const ex_2 = employees.sort((a,b)=>{return b.salary-a.salary});
-        console.log("--------------------------");
-        console.log(ex_2);
-        console.log("--------------------------");
-
+        let pb2 = employees.sort((a, b) => { return b.salary - a.salary });
+        console.log("문제 2 :", pb2);
         //모든 직원의 연봉(salary) 에 근속연수*100 만큼의 보너스를 추가하여 total_salary필드를 추가한 배열을 반환
-        const ex_3 = employees.map((item)=>{return {...item,"total_salary":item.salary+item.years*100} })
-        console.log("--------------------------");
-        console.log(ex_3);
-        console.log("--------------------------");
-
+        let pb3 = employees.map(item => {
+            item = { ...item, 'total_salary': item.salary + (item.years * 100) };
+            return item
+        });
+        console.log("문제 3 :", pb3);
         //department(부서) 별로 직원들의 연봉총합을 구하세요
+        let pb4_개발 = employees.filter(item => { return item.department == "개발" }).reduce((sum, item) => { return sum + item.salary }, 0);
+        let pb4_디자인 = employees.filter(item => { return item.department == "디자인" }).reduce((sum, item) => { return sum + item.salary }, 0);
+        let pb4_경영 = employees.filter(item => { return item.department == "경영" }).reduce((sum, item) => { return sum + item.salary }, 0);
+        let pb4_마케팅 = employees.filter(item => { return item.department == "마케팅" }).reduce((sum, item) => { return sum + item.salary }, 0);
+        console.log("문제 4(개발) :", pb4_개발);
+        console.log("문제 4(디자인) :", pb4_디자인);
+        console.log("문제 4(경영) :", pb4_경영);
+        console.log("문제 4(마케팅) :", pb4_마케팅);
         const ex_4 = employees.reduce((sum,item)=>{
-            sum[item.department]=(sum[item.department]==undefined? 0 : sum[item.department])+item.salary;
+            sum[item.department]=
+            (sum[item.department]==undefined ? 0 : sum[item.department])+item.salary;
             return sum;
-        },{});
-        console.log("--------------------------");
+        });
         console.log(ex_4);
-        console.log("--------------------------");
-        // 연봉(salary)가 가장높은 직원을 찾아 객체하나만 반환(문서에서 find를 찾아보세요 - !)
-        console.log("--------------------------");
-        const ex_5 = employees.sort((a,b)=>{return b.salary-a.salary;})[0]
-        console.log(ex_5);
-        console.log("--------------------------");
+        // employees.map((item)=>{
+            // let tmp = {};
+            // tmp[item.department]=item.salary;
+        // });
+        //연봉(salary)가 가장높은 직원을 찾아 객체하나만 반환(문서에서 find를 찾아보세요 - !)
+        let pb5_1 = employees.sort((a, b) => { return b.salary - a.salary })[0];
+        let pb5_2 = 
+        console.log("문제 5 :", pb5_1);
 
-        // FIND 써보기...
-        const max = 
-        employees.map((item)=>{
-            return item.salary
-        }).sort((a,b)=>{return b-a})[0];
-
-        const max_object = employees.find(item=>{return item.salary==max})
-        console.log(max_object);
     </script>
 </body>
 
