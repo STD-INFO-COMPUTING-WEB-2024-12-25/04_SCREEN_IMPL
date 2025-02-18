@@ -43,7 +43,6 @@
         const colnumInput = document.querySelector('#colnum');
         const tableEl = document.querySelector('#tbl>tbody');
         let selectTdCount = 0;
-        let middleTd = 0;
 
         function makemap() {
             // 테이블 초기화
@@ -63,8 +62,6 @@
                         newTd.style.backgroundColor = 'lightgray';
                         // 선택된 td값 저장
                         selectTdCount = i * Number(colnumInput.value) + j + 1;
-                        // 중간 td값 저장
-                        middleTd = i * Number(colnumInput.value) + j + 1;
                     }
                     newTr.appendChild(newTd);
                 }
@@ -108,9 +105,12 @@
                         console.log("down");
                         break;
                 }
-                // 값을 넘어갈 시 중간값으로 초기화
-                if(selectTdCount <= 0|| selectTdCount > Number(colnumInput.value)*Number(rownumInput.value)){
-                    selectTdCount = middleTd;
+                // 값을 넘어갈시 처리
+                if(selectTdCount <= 0){
+                    selectTdCount += Number(colnumInput.value)*Number(rownumInput.value);
+                }
+                if(selectTdCount > Number(colnumInput.value)*Number(rownumInput.value)){
+                    selectTdCount -= Number(colnumInput.value)*Number(rownumInput.value);
                 }
                 // 선택된 td 배경 지정
                 document.querySelectorAll('td').forEach(item => {
