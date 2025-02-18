@@ -42,7 +42,7 @@
         const rownumInput = document.querySelector('#rownum');
         const colnumInput = document.querySelector('#colnum');
         const tableEl = document.querySelector('#tbl>tbody');
-        let selectTdCound = 0;
+        let selectTdCount = 0;
         let middleTd = 0;
 
         function makemap() {
@@ -57,7 +57,7 @@
                     newTd.innerHTML = i * Number(colnumInput.value) + j + 1;
                     if (i == middleRowValue && j == middleColValue) {
                         newTd.style.backgroundColor = 'lightgray';
-                        selectTdCound = i * Number(colnumInput.value) + j + 1;
+                        selectTdCount = i * Number(colnumInput.value) + j + 1;
                         middleTd = i * Number(colnumInput.value) + j + 1;
                     }
                     newTr.appendChild(newTd);
@@ -70,8 +70,8 @@
                         item.style.backgroundColor = 'white';
                     });
                     item.style.backgroundColor = 'lightgray';
-                    selectTdCound = Number(e.target.classList.value);
-                    console.log(selectTdCound);
+                    selectTdCount = Number(e.target.classList.value);
+                    console.log(selectTdCount);
                 })
                 item.addEventListener('keydown', (e) => {
                     console.log(e.keyCode);
@@ -85,27 +85,27 @@
                 console.log("keyCode : ",e.keyCode)
                 switch (Number(e.keyCode)) {
                     case 37:
-                        selectTdCound -= 1
+                        selectTdCount -= 1
                         console.log("left");
                         break;
                     case 38:
-                        selectTdCound -= Number(colnumInput.value);
+                        selectTdCount -= Number(colnumInput.value);
                         console.log("up");
                         break;
                     case 39:
-                        selectTdCound += 1
+                        selectTdCount += 1
                         console.log("right");
                         break;
                     case 40:
-                        selectTdCound += Number(colnumInput.value);
+                        selectTdCount += Number(colnumInput.value);
                         console.log("down");
                         break;
                 }
-                if(selectTdCound <= 0|| selectTdCound > Number(colnumInput.value)*Number(rownumInput.value)){
-                    selectTdCound = middleTd;
+                if(selectTdCount <= 0|| selectTdCount > Number(colnumInput.value)*Number(rownumInput.value)){
+                    selectTdCount = middleTd;
                 }
                 document.querySelectorAll('td').forEach(item => {
-                            if(Number(item.classList.value) == selectTdCound){
+                            if(Number(item.classList.value) == selectTdCount){
                                 item.style.backgroundColor = 'lightgray';
                                 console.log("true");
                             } else{
