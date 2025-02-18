@@ -78,8 +78,11 @@
     <div class="container">
         <h1>타자연습</h1>
         <div id="target-text"></div>
-        <div id="result">입력된 값이 올바른지 여부를 확인하는 부분입니다</div>
+        <div id="result">
+            <!-- 입력된 값이 올바른지 여부를 확인하는 부분입니다 -->
+        </div>
         <input type="text" id="input-text" placeholder="위 문장을 입력하세요" />
+        
         <div id="percentage">
             <span class="material-symbols-outlined">local_shipping</span>
         </div>
@@ -141,10 +144,12 @@
             console.log('전체문자열길이 : ',text.length,'옳게입력한 문자개수 :',validCnt);
             const progressPercent =  (validCnt / text.length) * 100;
             const progressIconEl = document.querySelector('#percentage span');
-            if(progressPercent !== 100)
+            if(progressPercent !== 100){
                 progressIconEl.style.left=`${progressPercent}%`;
-            else
+            }
+            else{
                 progressIconEl.style.left=`calc(${progressPercent}% - 25px)`;
+            }
             
             //문장 전체 일치여부 확인
             if (text === inputedValue) {
@@ -166,7 +171,6 @@
                         }
                     }
                     
-
                     targetTextEl.innerHTML = texts[textsIdx];
                     inputEl.value = "";
                     resultEl.innerHTML = "";
@@ -176,7 +180,7 @@
 
                     //자동차아이콘 left : 0;
                     progressIconEl.style.left=`0`;
-                }, 1000);
+                }, 500);
 
 
 
