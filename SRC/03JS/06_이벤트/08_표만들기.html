@@ -43,6 +43,7 @@
         const colnumInput = document.querySelector('#colnum');
         const tableEl = document.querySelector('#tbl>tbody');
         let selectTdCound = 0;
+        let middleTd = 0;
 
         function makemap() {
             tableEl.innerHTML = '';
@@ -57,6 +58,7 @@
                     if (i == middleRowValue && j == middleColValue) {
                         newTd.style.backgroundColor = 'lightgray';
                         selectTdCound = i * Number(colnumInput.value) + j + 1;
+                        middleTd = i * Number(colnumInput.value) + j + 1;
                     }
                     newTr.appendChild(newTd);
                 }
@@ -98,6 +100,9 @@
                         selectTdCound += Number(colnumInput.value);
                         console.log("down");
                         break;
+                }
+                if(selectTdCound <= 0|| selectTdCound > Number(colnumInput.value)*Number(rownumInput.value)){
+                    selectTdCound = middleTd;
                 }
                 document.querySelectorAll('td').forEach(item => {
                             if(Number(item.classList.value) == selectTdCound){
