@@ -15,12 +15,54 @@
     <input id="rownum" placeholder="행의개수입력" style="width:200px;">
     <input id="colnum" placeholder="열의개수입력" style="width:200px;">
     <button onclick="makemap()">생성</button>
-
     <hr>
     <table id="tbl">
         <tbody>
             
         </tbody>
     </table>
+    <script>
+
+        //State 
+        let curX = 0;
+        let curY = 0;
+
+        //
+        const selectedStyle = (xPos,yPos)=>{
+            const selectedEl = document.getElementById(`${xPos}|${yPos}`);
+            selectedEl.style.backgroundColor='grey';
+        }
+
+        const makemap = ()=>{
+            const row = document.querySelector('#rownum').value; //tr 개수
+            const col = document.querySelector('#colnum').value; //td 개수
+            const tbodyEl = document.querySelector('#tbl tbody');
+
+            while(tbodyEl.firstChild){
+                tbodyEl.removeChild(tbodyEl.firstChild)
+            }
+
+            console.log('row',row,'col',col);
+            for(let i=0;i<row;i++){
+                const trEl = document.createElement('tr');
+
+                for(let j=0;j<col;j++){
+                    const tdEl = document.createElement('td');
+                    tdEl.innerHTML=`(${i},${j})`;
+                    // tdEl.setAttribute('data-row',i);
+                    // tdEl.setAttribute('data-col',j);
+                    tdEl.setAttribute('id',`${i}|${j}`);
+                    trEl.appendChild(tdEl);
+                }
+                tbodyEl.appendChild(trEl);
+            }
+
+            //기본 cur 위치
+            curX = Math.ceil(col/2);
+            curY = Math.ceil(row/2);
+            //초기 선택된 위치 스타일링
+            selectedStyle(curX,curY);
+        }
+    </script>
 </body>
 </html>
