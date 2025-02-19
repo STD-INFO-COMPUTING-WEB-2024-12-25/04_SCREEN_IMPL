@@ -104,20 +104,16 @@
 			const name = usernameEl.value;
 			const age = ageEl.value;
 			const address = addressEl.value;
-			createNode(name, age, address);
-			usernameEl.value = '';
-			ageEl.value = '';
-			addressEl.value = '';
+
+			if (isValid(name, age, address)) {
+				createNode(name, age, address);
+				usernameEl.value = '';
+				ageEl.value = '';
+				addressEl.value = '';
+			}
 		});
 
 		function createNode(name, age, address) {
-			// 유효성 검사
-			if (!isValid(age)) {
-				return;
-			};
-			// if (!isValid(name)) {
-			// 	return;
-			// };
 			const row = document.createElement('tr');
 			const a = document.createElement('td');
 			const b = document.createElement('td');
@@ -152,23 +148,22 @@
 		}
 
 		// 유효성 체크 함수
-		function isValid(age) {
-			const regex = /^[1-9]/;
-
-			if (!(regex.test(age))) {
-				alert('나이에 1이상의 숫자를 입력하세요.')
+		function isValid(name, age, address) {
+			const ageRegex = /^[1-9][0-9]*$/;
+			if (name.trim() === '') {
+				alert('이름을 입력하세요.');
+				return false;
+			}
+			else if (!ageRegex.test(age)) {
+				alert('나이에 1이상의 숫자를 입력하세요.');
+				return false;
+			}
+			else if (address.trim() === '') {
+				alert('주소를 입력하세요.')
 				return false;
 			}
 			return true;
 		};
-
-		// function isValid(name) {
-		// 	if (name.trim() === '') {
-		// 		alert('문자를 입력하세요.')
-		// 		return false;
-		// 	}
-		// 	return true;
-		// };
 	</script>
 </body>
 
