@@ -120,12 +120,18 @@
             const name = usernameEl.value;
             const age = ageEl.value;
             const addr = addressEl.value;
-            createNode({ "name": name, "name": age, "name": addr })
-
+            createNode({ "name": name, "age": age, "addr": addr })
+            usernameEl.value="";
+            ageEl.value="";
+            addressEl.value="";
         })
 
         //노드 추가
         const createNode = (profile) => {
+            
+            //유효성 체크 
+            if(!isValid(profile)) return ;
+
             //새노드 생성
             const trEl = document.createElement("tr");
 
@@ -140,6 +146,9 @@
 
 
             //데이터 삽입 
+            nameEl.innerHTML = profile.name;
+            ageEl.innerHTML = profile.age;
+            addrEl.innerHTML = profile.addr;
 
             //스타일링
             trEl.classList.add('item');
@@ -168,6 +177,32 @@
             console.log('delete clicked',e);
             const parentNode = e.target.parentNode.parentNode;
             parentNode.remove();
+        }
+
+        //유효성 체크
+        function isValid(profile){
+            console.log('typeof',profile)
+            if(
+                profile.name.trim()==="" &&
+                profile.age.trim()==="" &&
+                profile.addr.trim()===""
+            ){
+                alert("사용자 정보를 입력하세요");
+                return false;
+            }
+            if(profile.name.trim()===""){
+                alert("이름을 입력하세요");
+                return false;
+            }
+            if(profile.age.trim()===""){
+                alert("나이를 입력하세요");
+                return false;
+            }
+            if(profile.addr.trim()===""){
+                alert("주소를 입력하세요");
+                return false;
+            }
+            return true;
         }
 
     </script>
