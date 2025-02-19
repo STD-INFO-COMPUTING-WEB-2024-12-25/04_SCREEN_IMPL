@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .item{
+            min-width:300px;
+            height:35px;
+            margin : 5px;
+            padding : 5px;
+            border : 1px solid;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;;
+            gap : 10px;
+        }
+        .item>.left{
+            width : calc(100% - 30px);
+            height : 100%;
+            border : 1px solid;
+        }
+        .item>.right{
+            width : 30px;
+            height : 100%;
+            border : 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="input"><span> | </span><button class="btn">입력</button>
+    <hr>
+    <div class="container"></div>
+
+    <script>
+        // DOM LOAD EVENT
+        document.addEventListener('DOMContentLoaded',()=>{
+           
+            // 요소 검색
+            const inputEl = document.querySelector('.input');
+            const btnEl = document.querySelector('.btn');
+            const containerEl = document.querySelector('.container');
+
+            // 이벤트 처리
+            btnEl.addEventListener('click',()=>{
+                console.log('clicked');
+                const text = inputEl.value;
+                createNode(text);
+                inputEl.value='';
+            });
+
+
+            // 함수
+            function createNode(text){
+                //div, > left(text),right(icon)
+                //노드 생성
+                const divEl = document.createElement('div');
+                const leftEl = document.createElement('div');
+                const rightEl = document.createElement('div');
+
+                //스타일링(class 추가)
+                divEl.classList.add('item');
+                leftEl.classList.add('left');
+                rightEl.classList.add('right');
+
+                //노드 연결
+                divEl.appendChild(leftEl);
+                divEl.appendChild(rightEl);
+                containerEl.appendChild(divEl);
+
+            }
+            function deleteNode(){
+                
+            }
+
+
+        })
+
+
+    </script>
+</body>
+</html>
