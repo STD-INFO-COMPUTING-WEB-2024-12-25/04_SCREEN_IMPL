@@ -40,7 +40,6 @@
             width: 50px;
             height: 35px;
             border: 1px solid;
-            margin: 2px;
             text-align: center;
         }
 
@@ -72,10 +71,12 @@
         }
 
         td>input {
-            width: calc(100% - 10px);
+            width: calc(100% - 3px);
             height: 100%;
             border: none;
             text-align: center;
+            outline: none;
+            transition: .3s;
         }
 
         input::-webkit-inner-spin-button {
@@ -139,8 +140,10 @@
                 const newTd = document.createElement('td');
                 const newInput = document.createElement('input');
                 newInput.value = item.value;
+                newInput.readOnly = true;
+                InputEvents(newInput);
                 item.value = '';
-                if (isValid(newInput.value)) {
+                if (newInput.value != '') {
                     // Input 태그 추가
                     newTd.appendChild(newInput);
                 } else {
@@ -150,6 +153,27 @@
                 newTr.appendChild(newTd);
             });
             tableBodyEl.append(newTr);
+        }
+
+        function InputEvents(newInput) {
+            // 오른쪽 클릭 시 수정가능
+            newInput.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                console.log("test");
+                newInput.readOnly = false;
+                newInput.style.backgroundColor = 'lightgray';
+            });
+            // 엔터 입력 시 수정완료
+            newInput.addEventListener('keydown', (e) => {
+                if (e.keyCode == 13) {
+                    newInput.readOnly = true;
+                    newInput.style.backgroundColor = '';
+                }
+            });
+            newInput.addEventListener('blur', (e) => {
+                newInput.readOnly = true;
+                newInput.style.backgroundColor = '';
+            });
         }
 
         function delectBtnCreate(newTd) {
@@ -167,6 +191,7 @@
 
         function isValid(value) {
             if (value == "" || value == null) {
+                alert("공백 문자입니다.")
                 return false;
             } else {
                 return true;
