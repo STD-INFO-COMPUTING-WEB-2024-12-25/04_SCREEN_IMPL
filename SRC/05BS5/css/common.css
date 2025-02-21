@@ -22,5 +22,23 @@ a{
 /*  */
 .wrapper>main{}
 .wrapper>main>section{}
+
+.wrapper>main>section.banner .carousel-control-prev-icon,
+.wrapper>main>section.banner .carousel-control-next-icon
+{
+    background-color: darkgray;
+    padding : 25px;
+    border-radius: 50%;
+    font-size : 2rem !important;
+    
+    background-image: url('');
+    color:white;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1 !important;
+}
+
 /*  */
 .wrapper>footer{}
