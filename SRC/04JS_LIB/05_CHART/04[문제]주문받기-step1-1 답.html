@@ -79,7 +79,7 @@
         </form>
         <!-- 상단 폼에서 선택한 식당의 메뉴를 표시 -->
         <div class="restorant-menu-block">
-                [문제]선택한 레스토랑에 대한 메뉴가 표시되어야 합니다!
+            [문제]선택한 레스토랑에 대한 메뉴가 표시되어야 합니다!
         </div>
 
 
@@ -95,19 +95,19 @@
             </div>
             <div class="item">
                 <label>상호명 : </label>
-                <input type="text" name="주문번호" />
+                <input type="text" name="상호명" />
             </div>
             <div class="item">
                 <label>메뉴명 : </label>
-                <input type="text" name="주문번호" />
+                <input type="text" name="메뉴명" />
             </div>
             <div class="item">
                 <label>가격 : </label>
-                <input type="text" name="주문번호" />
+                <input type="text" name="가격" />
             </div>
             <div class="item">
                 <label>수량 : </label>
-                <input type="text" name="주문번호" />
+                <input type="text" name="수량" />
             </div>
             <div>
                 <button>주문하기</button>
@@ -184,20 +184,78 @@
 
         //     // 식당정보 표시하기
         //     const restorantMenuBlockEl = document.querySelector('.restorant-menu-block');
+
+        //     console.log('MNU',restorantEl.MNU);
         //     restorantMenuBlockEl.innerHTML=restorantEl.MNU;
 
         // });
 
         // step-2
-        const showMenu = document.querySelector('.select-restorant');
-        showMenu.addEventListener('click',()=>{
-            const form = document.form1;
-            const selectedRestorant = form.selectRestorant.value; 
-            console.log("selected",selectedRestorant)
+        // const showMenu = document.querySelector('.select-restorant');
+        // showMenu.addEventListener('click', () => {
+        //     // console.log('중구맛집', 중구맛집)
+        //     console.log('===========')
+        //     const form = document.form1;
+        //     const selectedRestorant = form.selectRestorant.value;
+        //     // console.log("selected", selectedRestorant)
 
-            const restorantEl = RenewaledMenu.find((item)=>{return item.BZ_NM===selectedRestorant})
-            console.log('find',restorantEl)
+        //     const restorantEl = RenewaledMenu.find((item) => { return item.BZ_NM === selectedRestorant })
+        //     // console.log('find', restorantEl)
+
+        //     if (restorantEl) {
+        //         Object.entries(restorantEl).forEach(([key, value]) => {
+        //             console.log(`${key}\n${JSON.stringify(value)}`);
+        //         });
+        //     } else {
+        //         console.log('선택한 값이 없습니다.');
+        //     }
+
+        // });
+
+        const showMenu = document.querySelector('.select-restorant');
+        showMenu.addEventListener('click', () => {
+            // console.log('중구맛집', 중구맛집)
+            console.log('===========')
+            const form = document.form1;
+            const selectedRestorant = form.selectRestorant.value;
+            // console.log("selected", selectedRestorant)
+
+            const restorantEl = RenewaledMenu.find((item) => { return item.BZ_NM === selectedRestorant })
+            // console.log('find', restorantEl)
+
+            if (restorantEl) {
+                // 찾은 맛집의 정보를 각각의 input에 넣기
+                const { BZ_NM, MNU } = restorantEl; // BZ_NM: 상호명, MNU: 메뉴 목록
+
+                // 상호명 입력란에 값 넣기
+                const restaurantInput = document.querySelector('[name="상호명"]');
+                if (restaurantInput) {
+                    restaurantInput.value = BZ_NM; // 상호명 넣기
+                }
+
+                // 메뉴명 입력란에 값 넣기 (첫 번째 메뉴 예시로 넣기)
+                const menuInput = document.querySelector('[name="메뉴명"]');
+                if (menuInput && MNU && MNU.length > 0) {
+                    menuInput.value = MNU[0][0]
+                }
+
+                // 가격 입력란에 값 넣기 (첫 번째 메뉴의 가격 예시)
+                const priceInput = document.querySelector('[name="가격"]');
+                if (priceInput && MNU && MNU[0].length > 1) {
+                    priceInput.value = MNU[0][1];
+                }
+
+                // 수량 입력란에 값 넣기 (임의로 1로 설정)
+                const quantityInput = document.querySelector('[name="수량"]');
+                if (quantityInput) {
+                    quantityInput.value = 1; 
+                }
+            } else {
+                console.log('선택한 값이 없습니다.');
+            }
+
         });
+
 
         // step-3
 
